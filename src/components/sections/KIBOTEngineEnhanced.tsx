@@ -96,7 +96,7 @@ export default function KIBOTEngineEnhanced() {
         >
           <Card
             variant="corners"
-            className="max-w-3xl mx-auto bg-primary/10
+            className="max-w-3xl mx-auto bg-primary/10"
           >
             <div className="p-8">
               <p className="text-lg mb-6">
