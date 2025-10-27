@@ -85,7 +85,7 @@ export default function FlywheelFunding() {
         >
           <Card
             variant="corners"
-            className="max-w-3xl mx-auto bg-primary/10
+            className="max-w-3xl mx-auto bg-primary/10"
           >
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">
