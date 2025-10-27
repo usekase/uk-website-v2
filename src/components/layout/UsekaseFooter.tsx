@@ -9,11 +9,8 @@ export default function UsekaseFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary flex items-center justify-center text-white font-bold text-sm">
-                UK
-              </div>
-              <span className="font-bold text-xl">Usekase</span>
+            <div className="flex items-center mb-4">
+              <img src="/uk-logo.png" alt="Usekase" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
               Building AI capabilities you can own, not just rent.
