@@ -432,6 +432,17 @@ Consider extending with:
 - [Class Variance Authority Docs](https://cva.style/docs)
 - [Tailwind CSS Shadows](https://tailwindcss.com/docs/box-shadow)
 - [ShadCN UI Card](https://ui.shadcn.com/docs/components/card)
+- **[Card Border Standards](./CARD_BORDER_STANDARDS.md)** - Official design system standards for all card borders and corner decorations
+
+## 🎨 Design System Update
+
+**IMPORTANT**: All new cards should follow the [Card Border Standards](./CARD_BORDER_STANDARDS.md) which specifies:
+- Zinc-based border colors (`border-zinc-200 dark:border-zinc-700`)
+- Medium border radius (`rounded-md`)
+- Decorative corner elements at all four corners
+- 2px border width (`border-2`)
+
+The "corners" variant in this component already implements these standards and should be the default for new card implementations.
 
 ---
 

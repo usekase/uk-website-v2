@@ -327,6 +327,17 @@ import ValueProposition from "@/components/sections/ValueProposition";
 - [Tabler Icons Documentation](https://tabler.io/icons)
 - [Tailwind Group Hover](https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state)
 - [CSS Transitions Performance](https://web.dev/animations-guide/)
+- **[Card Border Standards](./CARD_BORDER_STANDARDS.md)** - Official design system standards for all card borders and corner decorations
+
+## 🎨 Design System Update
+
+**IMPORTANT**: When creating new feature cards with hover effects, follow the [Card Border Standards](./CARD_BORDER_STANDARDS.md):
+- Use zinc-based borders (`border-zinc-200 dark:border-zinc-700`)
+- Apply `rounded-md` for border radius
+- Include decorative corner elements on all four corners
+- Use `border-2` for consistent 2px width
+
+This ensures visual consistency across all card-based components in the application.
 
 ## 🚀 Next Steps
 

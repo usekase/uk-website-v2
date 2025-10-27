@@ -184,6 +184,18 @@ const customButton = cva(
 
 Colors and design tokens are configured via CSS variables in `src/index.css`. The project includes both light and dark theme configurations.
 
+## Design System
+
+This project follows standardized design patterns for consistency:
+
+- **[Card Border Standards](./CARD_BORDER_STANDARDS.md)** - Official standards for all card borders and corner decorations
+  - Zinc-based borders (`border-zinc-200 dark:border-zinc-700`)
+  - Medium border radius (`rounded-md`)
+  - Decorative corner elements
+  - 2px border width (`border-2`)
+
+When creating new card-based components, always reference the Card Border Standards to ensure visual consistency.
+
 ## Learn More
 
 - [React Documentation](https://react.dev/)

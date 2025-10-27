@@ -437,6 +437,16 @@ Perfect for:
 - Course modules
 - Documentation sections
 
+## 🎨 Design System Standards
+
+**IMPORTANT**: The CategoryList component uses standard card borders and corner decorations. All new card-based components should follow the [Card Border Standards](./CARD_BORDER_STANDARDS.md) which specifies:
+- Zinc-based border colors (`border-zinc-200 dark:border-zinc-700`)
+- Medium border radius (`rounded-md`)
+- Decorative corner brackets on hover at top-left and bottom-right
+- 2px border width (`border-2`)
+
+For full details on implementing consistent card styling, see the [Card Border Standards documentation](./CARD_BORDER_STANDARDS.md).
+
 ---
 
 **Integration completed successfully!** The CategoryList component is now live in the Usekase website's Problem/Solution section with full TypeScript support, responsive design, and smooth animations.
@@ -446,3 +456,4 @@ Perfect for:
 - **Main Site**: [https://your-site.com/](https://your-site.com/) - See it in the "Old Way / New Way" section
 - **Demo Page**: [https://your-site.com/demos/category-list](https://your-site.com/demos/category-list)
 - **Component**: `src/components/ui/category-list.tsx`
+- **Design Standards**: [Card Border Standards](./CARD_BORDER_STANDARDS.md)

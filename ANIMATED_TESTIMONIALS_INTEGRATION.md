@@ -502,6 +502,16 @@ Perfect for:
 - Customer feedback
 - Portfolio showcases
 
+## 🎨 Design System Standards
+
+**NOTE**: While the AnimatedTestimonials component has its own specialized styling, when creating new card-based components, always follow the [Card Border Standards](./CARD_BORDER_STANDARDS.md):
+- Zinc-based border colors (`border-zinc-200 dark:border-zinc-700`)
+- Medium border radius (`rounded-md`)
+- Decorative corner elements at all four corners
+- 2px border width (`border-2`)
+
+This ensures visual consistency across all card components in the application.
+
 ---
 
 **Integration completed successfully!** The AnimatedTestimonials component is now live in the Usekase website's "Results That Speak" section with full TypeScript support, smooth animations, and autoplay functionality.
@@ -511,3 +521,4 @@ Perfect for:
 - **Main Site**: Visit [http://localhost:4173/](http://localhost:4173/) - Scroll to "Results That Speak" section
 - **Demo Page**: [http://localhost:4173/demos/animated-testimonials](http://localhost:4173/demos/animated-testimonials)
 - **Component**: `src/components/ui/animated-testimonials.tsx`
+- **Design Standards**: [Card Border Standards](./CARD_BORDER_STANDARDS.md)

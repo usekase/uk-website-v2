@@ -215,6 +215,19 @@ npm run preview
 - Clear visual hierarchy
 - Consistent spacing and rhythm
 
+## 🎨 Design System
+
+### Card Border Standards
+
+All cards in the Usekase website follow the **[Card Border Standards](./CARD_BORDER_STANDARDS.md)**:
+- Zinc-based borders (`border-zinc-200 dark:border-zinc-700`)
+- Medium border radius (`rounded-md`)
+- Decorative L-shaped corner elements at all four corners
+- Consistent 2px border width (`border-2`)
+- Full dark mode support
+
+When creating new card components, always reference the [Card Border Standards documentation](./CARD_BORDER_STANDARDS.md) for implementation details and best practices.
+
 ## 🎨 Customization
 
 ### Changing Colors
