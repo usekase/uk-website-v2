@@ -24,7 +24,7 @@ export default function UsekaseNavbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b bg-background/80 backdrop-blur-lg supports-[backdrop-filter]:bg-background/60">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -72,7 +72,7 @@ export default function UsekaseNavbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t bg-background"
+            className="lg:hidden border-t bg-white"
           >
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col space-y-2">

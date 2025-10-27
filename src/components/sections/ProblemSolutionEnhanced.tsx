@@ -117,15 +117,15 @@ export default function ProblemSolutionEnhanced() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {/* Header outside container */}
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive mb-4 text-destructive-foreground">
-                  <X className="w-8 h-8" />
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary text-secondary-foreground flex-shrink-0">
+                  <X className="w-4 h-4" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight">The Old Way</h3>
               </div>
 
               {/* Container with categories */}
-              <div className="bg-destructive/5 border-2 border-destructive/20 rounded-lg p-8">
+              <div className="bg-secondary/5 border-2 border-secondary/20 rounded-lg p-8">
                 <div className="space-y-3">
                   {oldWayCategories.map((category) => (
                     <div
@@ -138,20 +138,20 @@ export default function ProblemSolutionEnhanced() {
                         className={cn(
                           "relative overflow-hidden border bg-card transition-all duration-300 ease-in-out cursor-pointer",
                           hoveredOldWay === category.id
-                            ? 'h-32 border-destructive shadow-lg shadow-destructive/20 bg-destructive/5'
-                            : 'h-24 border-border hover:border-destructive/50'
+                            ? 'h-32 border-secondary shadow-lg shadow-secondary/20 bg-secondary/5'
+                            : 'h-24 border-border hover:border-secondary/50'
                         )}
                       >
                         {/* Corner brackets that appear on hover */}
                         {hoveredOldWay === category.id && (
                           <>
                             <div className="absolute top-3 left-3 w-6 h-6">
-                              <div className="absolute top-0 left-0 w-4 h-0.5 bg-destructive" />
-                              <div className="absolute top-0 left-0 w-0.5 h-4 bg-destructive" />
+                              <div className="absolute top-0 left-0 w-4 h-0.5 bg-secondary" />
+                              <div className="absolute top-0 left-0 w-0.5 h-4 bg-secondary" />
                             </div>
                             <div className="absolute bottom-3 right-3 w-6 h-6">
-                              <div className="absolute bottom-0 right-0 w-4 h-0.5 bg-destructive" />
-                              <div className="absolute bottom-0 right-0 w-0.5 h-4 bg-destructive" />
+                              <div className="absolute bottom-0 right-0 w-4 h-0.5 bg-secondary" />
+                              <div className="absolute bottom-0 right-0 w-0.5 h-4 bg-secondary" />
                             </div>
                           </>
                         )}
@@ -162,7 +162,7 @@ export default function ProblemSolutionEnhanced() {
                             <h3
                               className={cn(
                                 "font-bold transition-colors duration-300 text-xl md:text-2xl",
-                                hoveredOldWay === category.id ? 'text-destructive' : 'text-foreground'
+                                hoveredOldWay === category.id ? 'text-secondary' : 'text-foreground'
                               )}
                             >
                               {category.title}
@@ -181,7 +181,7 @@ export default function ProblemSolutionEnhanced() {
 
                           {/* Icon appears on the right on hover */}
                           {category.icon && hoveredOldWay === category.id && (
-                            <div className="text-destructive opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="text-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                               {category.icon}
                             </div>
                           )}
@@ -200,9 +200,9 @@ export default function ProblemSolutionEnhanced() {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               {/* Header outside container */}
-              <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-4 text-primary-foreground">
-                  <Zap className="w-8 h-8" />
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary text-primary-foreground flex-shrink-0">
+                  <Zap className="w-4 h-4" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight">The Usekase Way</h3>
               </div>

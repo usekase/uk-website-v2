@@ -44,7 +44,7 @@ export default function BOTModelEnhanced() {
     <section id="model">
       <StickyFeatureSection
         features={features}
-        headerTitle="Our Model: Build · Operate · Transfer · Monitor"
+        headerTitle="Our Model<br/><span class='text-primary'>Build, Operate, Transfer, Monitor</span>"
         headerSubtitle="A proven framework for delivering AI capabilities that become truly yours — no dependencies, no lock-in, just ownership."
       />
     </section>

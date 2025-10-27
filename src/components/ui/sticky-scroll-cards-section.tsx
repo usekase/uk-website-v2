@@ -89,9 +89,8 @@ const AnimatedHeader = ({ title, subtitle }: { title: string; subtitle: string }
                 ref={headerRef}
                 className={`text-4xl md:text-5xl font-bold transition-all duration-700 ease-out text-gray-900 dark:text-white ${headerInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
                 style={{ transformStyle: 'preserve-3d' }}
-            >
-                {title}
-            </h2>
+                dangerouslySetInnerHTML={{ __html: title }}
+            />
             <p
                 ref={pRef}
                 className={`text-lg text-gray-600 dark:text-gray-300 mt-4 transition-all duration-700 ease-out delay-200 ${pInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -115,7 +114,7 @@ export function StickyFeatureSection({
       <div className="px-[5%]">
         <div className="max-w-7xl mx-auto">
           {/* The main section for the features */}
-          <section className="py-24 md:py-48 flex flex-col items-center">
+          <section className="pt-12 pb-24 md:pt-16 md:pb-48 flex flex-col items-center">
 
             <AnimatedHeader title={headerTitle} subtitle={headerSubtitle} />
 
