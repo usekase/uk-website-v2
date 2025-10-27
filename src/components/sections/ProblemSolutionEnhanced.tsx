@@ -284,7 +284,13 @@ export default function ProblemSolutionEnhanced() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-12"
           >
-            <div className="max-w-3xl mx-auto bg-primary/10 border border-primary/20 rounded-lg p-8">
+            <div className="relative max-w-3xl mx-auto bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md p-8">
+              {/* Corner decorations */}
+              <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md" />
+              <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md" />
+              <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md" />
+              <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
+
               <p className="text-lg mb-6">
                 Ready to break free from recurring costs and vendor lock-in?
                 Let's build AI capabilities you'll actually own.
