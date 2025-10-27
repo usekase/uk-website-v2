@@ -8,6 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselDots,
 } from "@/components/ui/carousel";
 
 type ImageType = {
@@ -134,8 +135,14 @@ export function Gallery4({
               <motion.div
                 layoutId={`card-${image.id}-${id}`}
                 onClick={() => setActive(image)}
-                className="p-4 flex flex-col hover:bg-muted rounded-xl cursor-pointer"
+                className="p-4 flex flex-col hover:bg-muted rounded-xl cursor-pointer relative border-2 border-transparent hover:border-border group"
               >
+                {/* Corner decorations - only visible on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
+
                 <div className="flex gap-4 flex-col w-full">
                   <motion.div layoutId={`image-${image.id}-${id}`}>
                     <img
@@ -167,6 +174,7 @@ export function Gallery4({
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
+        <CarouselDots />
       </Carousel>
     </>
   );

@@ -83,7 +83,7 @@ export default function KIBOTEngine() {
         >
           <Card className="max-w-3xl mx-auto bg-primary/10 border-primary/20">
             <CardContent className="p-8">
-              <p className="text-lg mb-6">
+              <p className="text-lg ">
                 The result? Faster builds, lower costs, and battle-tested
                 components — while still delivering a solution that's 100%
                 tailored to your needs.

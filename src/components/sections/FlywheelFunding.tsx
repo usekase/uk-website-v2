@@ -11,22 +11,22 @@ export default function FlywheelFunding() {
   const stats = [
     {
       label: "Project Value",
-      value: "0.5-1M",
+      value: "≤ $1M",
       unit: "SGD",
     },
     {
       label: "Duration",
-      value: "≤24",
+      value: "≤ 24",
       unit: "months",
     },
     {
       label: "Client EBITDA Uplift",
-      value: "≈40%",
+      value: "≈ 40%",
       unit: "average",
     },
     {
       label: "Investor Return",
-      value: "≈40%",
+      value: "≈ 40%",
       unit: "over 24 months",
     },
   ];
@@ -61,8 +61,15 @@ export default function FlywheelFunding() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
+              className="relative group"
             >
-              <Card className="text-center hover:shadow-lg transition-shadow">
+              {/* Corner decorations - only visible on hover */}
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+
+              <Card className="text-center border-transparent group-hover:border-border transition-colors">
                 <CardContent className="p-6">
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                     {stat.value}
@@ -87,7 +94,7 @@ export default function FlywheelFunding() {
             variant="corners"
             className="max-w-3xl mx-auto bg-primary/10"
           >
-            <CardContent className="p-8">
+            <CardContent className="p-4">
               <h3 className="text-2xl font-bold mb-4">
                 Transformation that funds itself
               </h3>

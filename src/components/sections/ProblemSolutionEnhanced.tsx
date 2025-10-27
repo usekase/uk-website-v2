@@ -98,7 +98,8 @@ export default function ProblemSolutionEnhanced() {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Traditional AI Projects Fail —{" "}
+            Why Traditional AI Projects Fail
+            <br />
             <span className="text-primary">and How We Fix It</span>
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -291,7 +292,7 @@ export default function ProblemSolutionEnhanced() {
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md" />
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
 
-              <p className="text-lg mb-6">
+              <p className="text-lg">
                 Ready to break free from recurring costs and vendor lock-in?
                 Let's build AI capabilities you'll actually own.
               </p>

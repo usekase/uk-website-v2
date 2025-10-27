@@ -129,7 +129,7 @@ export function StickyFeatureSection({
                     style={{ top: '200px' }}
                 >
                   {/* White container with corners variant border */}
-                  <div className={`${feature.bgColor} bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md shadow-xl overflow-hidden relative`}>
+                  <div className={`${feature.bgColor} bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md shadow-xl relative`}>
                     {/* Corner decorations */}
                     <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md" />
                     <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md" />
@@ -139,7 +139,7 @@ export function StickyFeatureSection({
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-8 p-8 md:p-12">
                       {/* Card Content */}
                       <div className="flex flex-col justify-center">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">{feature.title}</h3>
+                        <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary">{feature.title}</h3>
                         <p className={feature.textColor}>{feature.description}</p>
                       </div>
 

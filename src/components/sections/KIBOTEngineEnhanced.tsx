@@ -57,7 +57,7 @@ export default function KIBOTEngineEnhanced() {
   ];
 
   return (
-    <section id="platform" className="py-24 bg-background" ref={ref}>
+    <section id="platform" className="pt-12 pb-24 bg-white dark:bg-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,13 +98,13 @@ export default function KIBOTEngineEnhanced() {
             variant="corners"
             className="max-w-3xl mx-auto bg-primary/10"
           >
-            <div className="p-8">
-              <p className="text-lg mb-6">
+            <div className="p-4">
+              <p className="text-lg pb-4">
                 The result? Faster builds, lower costs, and battle-tested
                 components — while still delivering a solution that's 100%
                 tailored to your needs.
               </p>
-              <Button size="lg" variant="default">
+              <Button size="lg" variant="secondary">
                 Explore K-Solutions
               </Button>
             </div>
@@ -143,15 +143,17 @@ const Feature = ({
       <div className="mb-4 relative z-10 px-10 text-primary">
         {icon}
       </div>
-      <div className="text-lg font-bold mb-2 relative z-10 px-10">
-        <div className="absolute left-0 inset-y-0 h-6 group-hover/feature:h-8 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200 origin-center" />
-        <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
-          {title}
-        </span>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200" />
+        <div className="text-lg font-bold mb-2 relative z-10 px-10">
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
+            {title}
+          </span>
+        </div>
+        <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
+          {description}
+        </p>
       </div>
-      <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
-        {description}
-      </p>
     </div>
   );
 };

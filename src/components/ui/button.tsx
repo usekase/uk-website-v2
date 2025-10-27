@@ -42,6 +42,30 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+    const shouldHaveCorners = variant === "default" || variant === "secondary"
+
+    if (shouldHaveCorners) {
+      return (
+        <div className="relative inline-flex group">
+          {/* Corner decorations - only visible on hover */}
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-zinc-700 size-4 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10 pointer-events-none" />
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-zinc-700 size-4 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10 pointer-events-none" />
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-zinc-700 size-4 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10 pointer-events-none" />
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-zinc-700 size-4 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10 pointer-events-none" />
+
+          <Comp
+            className={cn(
+              buttonVariants({ variant, size }),
+              "border-2 border-transparent group-hover:border-primary transition-colors",
+              className
+            )}
+            ref={ref}
+            {...props}
+          />
+        </div>
+      );
+    }
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
