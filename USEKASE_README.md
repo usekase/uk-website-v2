@@ -217,6 +217,16 @@ npm run preview
 
 ## 🎨 Design System
 
+### No Gradients Policy
+
+**IMPORTANT**: This project does not use CSS gradients. All backgrounds use solid colors from the design system:
+- **Primary**: `#cc33ab` (Vibrant Magenta)
+- **Secondary**: `#30e5e8` (Bright Cyan)
+- **Accent**: `#33ccad` (Teal)
+- **Destructive**: `#cc5833` (Orange-Red)
+
+Use opacity modifiers (`/5`, `/10`, `/20`) instead of gradients for subtle backgrounds. For example, `bg-primary/10` instead of `bg-gradient-to-br from-primary/10 to-accent/10`.
+
 ### Card Border Standards
 
 All cards in the Usekase website follow the **[Card Border Standards](./CARD_BORDER_STANDARDS.md)**:
@@ -225,6 +235,7 @@ All cards in the Usekase website follow the **[Card Border Standards](./CARD_BOR
 - Decorative L-shaped corner elements at all four corners
 - Consistent 2px border width (`border-2`)
 - Full dark mode support
+- **No gradients** - solid colors only
 
 When creating new card components, always reference the [Card Border Standards documentation](./CARD_BORDER_STANDARDS.md) for implementation details and best practices.
 

@@ -125,11 +125,11 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant, title, description, children, ...props }, ref) => {
     const GradientLines = () => (
       <>
-        <div className="absolute left-0 top-4 -z-0 h-px w-full bg-gradient-to-l from-zinc-200 via-zinc-400 to-zinc-600 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500 sm:top-6 md:top-8" />
-        <div className="absolute bottom-4 left-0 z-0 h-px w-full bg-gradient-to-r from-zinc-200 via-zinc-400 to-zinc-600 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500 sm:bottom-6 md:bottom-8" />
+        <div className="absolute left-0 top-4 -z-0 h-px w-full bg-zinc-200 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500 sm:top-6 md:top-8" />
+        <div className="absolute bottom-4 left-0 z-0 h-px w-full bg-zinc-200 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500 sm:bottom-6 md:bottom-8" />
         <div className="relative w-full border-x border-gradient-x">
-          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-t from-zinc-200 via-zinc-400 to-zinc-600 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500" />
-          <div className="absolute inset-y-0 right-0 w-px bg-gradient-to-t from-zinc-200 via-zinc-400 to-zinc-600 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500" />
+          <div className="absolute inset-y-0 left-0 w-px bg-zinc-200 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500" />
+          <div className="absolute inset-y-0 right-0 w-px bg-zinc-200 dark:from-zinc-900 dark:via-zinc-700 dark:to-zinc-500" />
           <div className="relative z-20 mx-auto py-8">{content}</div>
         </div>
       </>
@@ -265,7 +265,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
           className={cn(cardVariants({ variant, className }))}
           {...props}
         >
-          <div className="border rounded-sm bg-gradient-to-br from-white to-zinc-200/60 border-zinc-300 shadow-[2px_0_8px_rgba(0,_0,_0,_0.15)] dark:from-zinc-950 dark:to-zinc-900/60 dark:border-zinc-900/50 dark:shadow-inner">
+          <div className="border rounded-sm bg-primary/10 border-zinc-300 shadow-[2px_0_8px_rgba(0,_0,_0,_0.15)] dark:from-zinc-950 dark:to-zinc-900/60 dark:border-zinc-900/50 dark:shadow-inner">
             {content}
           </div>
         </div>

@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-lg" />
+            <div className="w-8 h-8 bg-primary rounded-lg" />
             <span className="font-bold text-xl">Demo App</span>
           </Link>
 

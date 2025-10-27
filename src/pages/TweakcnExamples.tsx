@@ -23,7 +23,7 @@ const customButtonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // New custom variants added with TweakCN-style approach
-        gradient: "bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600",
+        gradient: "bg-primary/10 text-white hover:from-purple-600 hover:to-pink-600",
         success: "bg-green-600 text-white hover:bg-green-700",
         warning: "bg-yellow-500 text-white hover:bg-yellow-600",
         info: "bg-blue-500 text-white hover:bg-blue-600",

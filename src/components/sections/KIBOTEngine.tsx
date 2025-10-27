@@ -81,7 +81,7 @@ export default function KIBOTEngine() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
-          <Card className="max-w-3xl mx-auto bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
+          <Card className="max-w-3xl mx-auto bg-primary/10 border-primary/20">
             <CardContent className="p-8">
               <p className="text-lg mb-6">
                 The result? Faster builds, lower costs, and battle-tested

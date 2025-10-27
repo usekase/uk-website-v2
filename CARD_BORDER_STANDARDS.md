@@ -209,11 +209,36 @@ For elevated cards, add shadows that complement borders:
 <div className="... shadow-xl">  {/* Subtle elevation */}
 ```
 
-## 🎨 Color Variants
+## 🎨 Color Policy
+
+### No Gradients Policy
+
+**IMPORTANT**: This project does not use CSS gradients. All backgrounds should use solid colors from the design system:
+- **Primary**: `bg-primary` (Vibrant Magenta `#cc33ab`)
+- **Secondary**: `bg-secondary` (Bright Cyan `#30e5e8`)
+- **Accent**: `bg-accent` (Teal `#33ccad`)
+- **With opacity**: Use `/5`, `/10`, `/20` suffixes (e.g., `bg-primary/10`)
+
+### ❌ Do Not Use:
+```tsx
+{/* Never use gradients */}
+<div className="bg-gradient-to-br from-primary to-accent">  {/* ❌ Wrong */}
+<div className="bg-gradient-to-t from-primary/5 to-transparent">  {/* ❌ Wrong */}
+```
+
+### ✅ Instead Use:
+```tsx
+{/* Use solid colors */}
+<div className="bg-primary">  {/* ✅ Correct */}
+<div className="bg-primary/10">  {/* ✅ Correct with opacity */}
+<div className="bg-secondary">  {/* ✅ Correct */}
+```
+
+### Color Variants
 
 While the standard uses zinc, you may use themed colors for specific contexts:
 
-### Primary Themed Cards
+#### Primary Themed Cards
 
 ```tsx
 <div className="relative bg-primary/5 border-2 border-primary/20 rounded-md">
@@ -223,7 +248,7 @@ While the standard uses zinc, you may use themed colors for specific contexts:
 </div>
 ```
 
-### Destructive Themed Cards
+#### Destructive Themed Cards
 
 ```tsx
 <div className="relative bg-destructive/5 border-2 border-destructive/20 rounded-md">

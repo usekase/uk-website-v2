@@ -32,7 +32,7 @@ export default function FlywheelFunding() {
   ];
 
   return (
-    <section id="investors" className="py-24 bg-gradient-to-br from-primary/5 via-background to-accent/5" ref={ref}>
+    <section id="investors" className="py-24 bg-primary/5" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -85,7 +85,7 @@ export default function FlywheelFunding() {
         >
           <Card
             variant="corners"
-            className="max-w-3xl mx-auto bg-gradient-to-r from-primary/10 to-accent/10"
+            className="max-w-3xl mx-auto bg-primary/10
           >
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold mb-4">

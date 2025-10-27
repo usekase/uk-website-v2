@@ -96,7 +96,7 @@ export default function KIBOTEngineEnhanced() {
         >
           <Card
             variant="corners"
-            className="max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10"
+            className="max-w-3xl mx-auto bg-primary/10
           >
             <div className="p-8">
               <p className="text-lg mb-6">
@@ -135,10 +135,10 @@ const Feature = ({
       )}
     >
       {index < 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
       )}
       {index >= 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/10 pointer-events-none" />
       )}
       <div className="mb-4 relative z-10 px-10 text-primary">
         {icon}

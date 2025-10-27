@@ -10,7 +10,7 @@ export default function UsekaseFooter() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 bg-primary flex items-center justify-center text-white font-bold text-sm">
                 UK
               </div>
               <span className="font-bold text-xl">Usekase</span>

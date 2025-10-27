@@ -36,7 +36,7 @@ export const CategoryList = ({
         {/* Header Section */}
         <div className="text-center mb-12 md:mb-16">
           {headerIcon && (
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/80 to-primary mb-6 text-primary-foreground">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6 text-primary-foreground">
               {headerIcon}
             </div>
           )}

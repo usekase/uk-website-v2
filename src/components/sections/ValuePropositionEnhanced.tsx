@@ -94,10 +94,10 @@ const ValueFeature = ({
         "lg:border-b border-border"
       )}
     >
-      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-gradient-to-t from-primary/5 to-transparent pointer-events-none" />
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
 
       <div className="mb-4 relative z-10 px-10">
-        <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white">
+        <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center text-white">
           {icon}
         </div>
       </div>

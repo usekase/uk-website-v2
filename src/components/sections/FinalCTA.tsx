@@ -9,7 +9,7 @@ export default function FinalCTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-primary via-primary/90 to-accent text-white relative overflow-hidden" ref={ref}>
+    <section id="about" className="py-24 bg-primary text-white relative overflow-hidden" ref={ref}>
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px]" />

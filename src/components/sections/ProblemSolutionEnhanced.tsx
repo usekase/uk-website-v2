@@ -118,7 +118,7 @@ export default function ProblemSolutionEnhanced() {
             >
               {/* Header outside container */}
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-destructive/80 to-destructive mb-4 text-destructive-foreground">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive mb-4 text-destructive-foreground">
                   <X className="w-8 h-8" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight">The Old Way</h3>
@@ -201,7 +201,7 @@ export default function ProblemSolutionEnhanced() {
             >
               {/* Header outside container */}
               <div className="text-center mb-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-primary/80 to-primary mb-4 text-primary-foreground">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary mb-4 text-primary-foreground">
                   <Zap className="w-8 h-8" />
                 </div>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight">The Usekase Way</h3>
@@ -284,7 +284,7 @@ export default function ProblemSolutionEnhanced() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center mt-12"
           >
-            <div className="max-w-3xl mx-auto bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-8">
+            <div className="max-w-3xl mx-auto bg-primary/10 border border-primary/20 rounded-lg p-8">
               <p className="text-lg mb-6">
                 Ready to break free from recurring costs and vendor lock-in?
                 Let's build AI capabilities you'll actually own.

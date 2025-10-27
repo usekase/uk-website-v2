@@ -92,7 +92,7 @@ export default function BOTModel() {
         <div className="max-w-7xl mx-auto">
           {/* Timeline visualization */}
           <div className="hidden lg:flex justify-center items-center mb-12 relative px-12">
-            <div className="absolute top-1/2 left-12 right-12 h-1 bg-gradient-to-r from-primary via-secondary via-accent to-chart-4 -translate-y-1/2" />
+            <div className="absolute top-1/2 left-12 right-12 h-1 bg-primary -translate-y-1/2" />
             <div className="flex justify-between items-center w-full max-w-5xl">
               {phases.map((phase, index) => (
                 <motion.div

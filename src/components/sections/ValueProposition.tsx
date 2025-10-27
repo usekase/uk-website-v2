@@ -64,7 +64,7 @@ export default function ValueProposition() {
             >
               <Card className="h-full hover:shadow-lg hover:scale-[1.02] transition-all">
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center mb-4">
                     <value.icon className="h-7 w-7 text-white" />
                   </div>
                   <CardTitle className="text-2xl">{value.title}</CardTitle>
