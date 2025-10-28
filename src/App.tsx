@@ -9,6 +9,7 @@ import CategoryListDemo from "./pages/CategoryListDemo";
 import AnimatedTestimonialsDemo from "./pages/AnimatedTestimonialsDemo";
 import FeatureStepsDemo from "./pages/FeatureStepsDemo";
 import StickyScrollDemo from "./pages/StickyScrollDemo";
+import ButtonTest from "./pages/ButtonTest";
 
 function App() {
   return (
@@ -18,19 +19,20 @@ function App() {
         <Route path="/" element={<UsekaseHome />} />
 
         {/* Component Demo Pages */}
-        <Route path="/demos" element={
+        <Route path="/demos/*" element={
           <div className="min-h-screen bg-background">
             <Navbar />
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/shadcn-examples" element={<ShadcnExamples />} />
-                <Route path="/tweakcn-examples" element={<TweakcnExamples />} />
-                <Route path="/card-variants" element={<CardVariantsDemo />} />
-                <Route path="/category-list" element={<CategoryListDemo />} />
-                <Route path="/animated-testimonials" element={<AnimatedTestimonialsDemo />} />
-                <Route path="/feature-steps" element={<FeatureStepsDemo />} />
-                <Route path="/sticky-scroll" element={<StickyScrollDemo />} />
+                <Route path="shadcn-examples" element={<ShadcnExamples />} />
+                <Route path="tweakcn-examples" element={<TweakcnExamples />} />
+                <Route path="card-variants" element={<CardVariantsDemo />} />
+                <Route path="category-list" element={<CategoryListDemo />} />
+                <Route path="animated-testimonials" element={<AnimatedTestimonialsDemo />} />
+                <Route path="feature-steps" element={<FeatureStepsDemo />} />
+                <Route path="sticky-scroll" element={<StickyScrollDemo />} />
+                <Route path="button-test" element={<ButtonTest />} />
               </Routes>
             </main>
             <footer className="border-t mt-12">

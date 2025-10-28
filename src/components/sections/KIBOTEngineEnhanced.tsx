@@ -104,7 +104,7 @@ export default function KIBOTEngineEnhanced() {
                 components — while still delivering a solution that's 100%
                 tailored to your needs.
               </p>
-              <Button size="lg" variant="primary">
+              <Button size="lg">
                 Explore K-Solutions
               </Button>
             </div>
