@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UsekaseHome from "./pages/UsekaseHome";
+import CaseStudies from "./pages/CaseStudies";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ShadcnExamples from "./pages/ShadcnExamples";
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         {/* Usekase Main Site */}
         <Route path="/" element={<UsekaseHome />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
 
         {/* Component Demo Pages */}
         <Route path="/demos/*" element={

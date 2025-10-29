@@ -1,18 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function UsekaseNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const navLinks = [
-    { label: "Solutions", href: "#solutions" },
-    { label: "Model", href: "#model" },
-    { label: "Platform", href: "#platform" },
-    { label: "Sectors", href: "#sectors" },
-    { label: "Investors", href: "#investors" },
-    { label: "About", href: "#about" },
+    { label: "Case Studies", href: "/case-studies", type: "route" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -23,8 +22,33 @@ export default function UsekaseNavbar() {
     }
   };
 
+  useEffect(() => {
+    if (!isHomePage) {
+      setIsScrolled(true);
+      return;
+    }
+
+    const handleScroll = () => {
+      const solutionsSection = document.querySelector("#solutions");
+      if (solutionsSection) {
+        const rect = solutionsSection.getBoundingClientRect();
+        // Transition when solutions section is about to come into view
+        setIsScrolled(rect.top <= 100);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Check initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isHomePage]);
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b bg-white shadow-sm">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled
+        ? "bg-white border-b border-border shadow-sm"
+        : "bg-black/20 backdrop-blur-md border-b border-white/10"
+    }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -34,15 +58,67 @@ export default function UsekaseNavbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
-            {navLinks.map((link) => (
-              <button
-                key={link.label}
-                onClick={() => scrollToSection(link.href)}
-                className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted rounded-md transition-colors"
-              >
-                {link.label}
-              </button>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.type === "route" && location.pathname === link.href;
+
+              return link.type === "route" ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="relative group px-2.5 py-1.5"
+                >
+                  {/* All 4 corners - always visible when active or hover */}
+                  {/* Top-left corner */}
+                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                  {/* Top-right corner */}
+                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                  {/* Bottom-left corner */}
+                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                  {/* Bottom-right corner */}
+                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                  <span className={`text-sm font-medium transition-colors duration-300 ${
+                    isActive
+                      ? 'text-primary'
+                      : isScrolled
+                        ? 'text-foreground/80 group-hover:text-foreground'
+                        : 'text-white/90 group-hover:text-white'
+                  }`}>
+                    {link.label}
+                  </span>
+                </Link>
+              ) : (
+                <button
+                  key={link.label}
+                  onClick={() => scrollToSection(link.href)}
+                  className="relative group px-2.5 py-1.5"
+                >
+                  {/* All 4 corners on hover */}
+                  {/* Top-left corner */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none" />
+
+                  {/* Top-right corner */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none" />
+
+                  {/* Bottom-left corner */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none" />
+
+                  {/* Bottom-right corner */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none" />
+
+                  <span className={`text-sm font-medium transition-colors duration-300 ${
+                    isScrolled
+                      ? 'text-foreground/80 group-hover:text-foreground'
+                      : 'text-white/90 group-hover:text-white'
+                  }`}>
+                    {link.label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
 
           {/* CTA Button - Desktop */}
@@ -53,7 +129,11 @@ export default function UsekaseNavbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-muted transition-colors"
+            className={`lg:hidden p-2 rounded-md transition-colors ${
+              isScrolled
+                ? 'hover:bg-muted text-foreground'
+                : 'hover:bg-white/10 text-white'
+            }`}
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -73,15 +153,62 @@ export default function UsekaseNavbar() {
           >
             <div className="container mx-auto px-4 py-4">
               <div className="flex flex-col space-y-2">
-                {navLinks.map((link) => (
-                  <button
-                    key={link.label}
-                    onClick={() => scrollToSection(link.href)}
-                    className="px-4 py-3 text-left text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                  >
-                    {link.label}
-                  </button>
-                ))}
+                {navLinks.map((link) => {
+                  const isActive = link.type === "route" && location.pathname === link.href;
+
+                  return link.type === "route" ? (
+                    <Link
+                      key={link.label}
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="relative group px-3 py-2 text-left"
+                    >
+                      {/* All 4 corners - always visible when active or hover */}
+                      {/* Top-left corner */}
+                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                      {/* Top-right corner */}
+                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                      {/* Bottom-left corner */}
+                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                      {/* Bottom-right corner */}
+                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
+
+                      <span className={`text-sm font-medium transition-colors duration-300 ${
+                        isActive
+                          ? 'text-primary'
+                          : 'text-foreground/80 group-hover:text-foreground'
+                      }`}>
+                        {link.label}
+                      </span>
+                    </Link>
+                  ) : (
+                    <button
+                      key={link.label}
+                      onClick={() => scrollToSection(link.href)}
+                      className="relative group px-3 py-2 text-left"
+                    >
+                      {/* All 4 corners on hover */}
+                      {/* Top-left corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none" />
+
+                      {/* Top-right corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none" />
+
+                      {/* Bottom-left corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none" />
+
+                      {/* Bottom-right corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none" />
+
+                      <span className="text-sm font-medium text-foreground/80 group-hover:text-foreground transition-colors duration-300">
+                        {link.label}
+                      </span>
+                    </button>
+                  );
+                })}
                 <div className="pt-4">
                   <Button className="w-full" size="lg">
                     Book Discovery Call

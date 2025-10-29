@@ -37,8 +37,9 @@ export default function Navbar() {
               <Link key={link.to} to={link.to}>
                 <Button
                   variant={isActive(link.to) ? "default" : "ghost"}
+                  size="sm"
                   className={cn(
-                    "transition-colors",
+                    "transition-colors h-8 py-1",
                     isActive(link.to) && "pointer-events-none"
                   )}
                 >
@@ -73,8 +74,9 @@ export default function Navbar() {
                 >
                   <Button
                     variant={isActive(link.to) ? "default" : "ghost"}
+                    size="sm"
                     className={cn(
-                      "w-full justify-start",
+                      "w-full justify-start h-8 py-1",
                       isActive(link.to) && "pointer-events-none"
                     )}
                   >
