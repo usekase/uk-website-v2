@@ -73,15 +73,7 @@ export default function PlatformWorkflow() {
 
   const cardVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: [0.17, 0.55, 0.55, 1],
-      },
-    },
+    visible: { opacity: 1, y: 0, scale: 1 },
   };
 
   return (
