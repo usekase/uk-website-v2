@@ -4,7 +4,12 @@
       "Bash(cat:*)",
       "Bash(curl:*)",
       "Bash(npx playwright test:*)",
-      "Bash(open http://localhost:5173/demos/button-test)"
+      "Bash(open http://localhost:5173/demos/button-test)",
+      "Bash(open http://localhost:5173/case-studies)",
+      "Bash(npx tsc:*)",
+      "mcp__ide__executeCode",
+      "Bash(npx playwright:*)",
+      "Read(//tmp/**)"
     ]
   },
   "enableAllProjectMcpServers": true,

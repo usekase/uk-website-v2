@@ -66,9 +66,9 @@ export default async function handler(
 
     // Send email using Mailgun template
     const messageData = {
-      from: `UseKase Contact Form <noreply@${domain}>`,
+      from: `UseKase Website <support@${domain}>`,
       to: recipientEmail,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New website Form from ${name}`,
       template: 'contact-us',
       'h:X-Mailgun-Variables': JSON.stringify({
         name: name.trim(),
