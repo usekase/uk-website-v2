@@ -7,7 +7,6 @@ import {
   MessageSquare,
   RefreshCw,
   PlayCircle,
-  FileText,
 } from "lucide-react";
 
 export default function PlatformWorkflow() {
@@ -80,7 +79,7 @@ export default function PlatformWorkflow() {
       scale: 1,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.17, 0.55, 0.55, 1],
       },
     },
   };
