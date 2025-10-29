@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Users } from "lucide-react";
+import { ArrowRight, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -41,13 +41,15 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12"
         >
-          <Button size="lg" variant="secondary">
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => {
+              window.location.href = "/contact-us";
+            }}
+          >
             Book a Discovery Call
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button size="lg" variant="secondary">
-            <Download className="mr-2 h-5 w-5" />
-            Download the Playbook
           </Button>
           <Button size="lg" variant="secondary">
             <Users className="mr-2 h-5 w-5" />

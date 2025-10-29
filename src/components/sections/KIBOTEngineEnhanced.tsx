@@ -99,14 +99,11 @@ export default function KIBOTEngineEnhanced() {
             className="max-w-3xl mx-auto bg-primary/10"
           >
             <div className="p-4">
-              <p className="text-lg pb-4">
+              <p className="text-lg">
                 The result? Faster builds, lower costs, and battle-tested
                 components — while still delivering a solution that's 100%
                 tailored to your needs.
               </p>
-              <Button size="lg">
-                Explore K-Solutions
-              </Button>
             </div>
           </Card>
         </motion.div>

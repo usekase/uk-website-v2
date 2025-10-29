@@ -98,12 +98,11 @@ export default function FlywheelFunding() {
               <h3 className="text-2xl font-bold mb-4">
                 Transformation that funds itself
               </h3>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground">
                 Clients get AI capabilities without large upfront costs. Investors
                 get attractive returns tied to real business performance. Usekase
                 gets paid for delivering measurable value.
               </p>
-              <Button size="lg">Learn About the Flywheel</Button>
             </CardContent>
           </Card>
         </motion.div>

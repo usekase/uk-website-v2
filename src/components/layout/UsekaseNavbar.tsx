@@ -12,6 +12,7 @@ export default function UsekaseNavbar() {
 
   const navLinks = [
     { label: "Case Studies", href: "/case-studies", type: "route" },
+    { label: "Platform", href: "/platform", type: "route" },
     { label: "Contact Us", href: "/contact-us", type: "route" },
   ];
 
@@ -132,7 +133,14 @@ export default function UsekaseNavbar() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button size="default">Book Discovery Call</Button>
+            <Button
+              size="default"
+              onClick={() => {
+                window.location.href = "/contact-us";
+              }}
+            >
+              Book Discovery Call
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -227,7 +235,13 @@ export default function UsekaseNavbar() {
                   );
                 })}
                 <div className="pt-4">
-                  <Button className="w-full" size="lg">
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    onClick={() => {
+                      window.location.href = "/contact-us";
+                    }}
+                  >
                     Book Discovery Call
                   </Button>
                 </div>

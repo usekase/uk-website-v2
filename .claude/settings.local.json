@@ -9,7 +9,8 @@
       "Bash(npx tsc:*)",
       "mcp__ide__executeCode",
       "Bash(npx playwright:*)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "WebFetch(domain:distyl.ai)"
     ]
   },
   "enableAllProjectMcpServers": true,

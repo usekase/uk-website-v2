@@ -1,4 +1,5 @@
 import { Mail, Phone, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function UsekaseFooter() {
   const currentYear = new Date().getFullYear();
@@ -60,24 +61,19 @@ export default function UsekaseFooter() {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <a href="#solutions" className="hover:text-foreground transition-colors">
-                  Solutions
-                </a>
+                <Link to="/case-studies" className="hover:text-foreground transition-colors">
+                  Case Studies
+                </Link>
               </li>
               <li>
-                <a href="#model" className="hover:text-foreground transition-colors">
-                  Our Model
-                </a>
+                <Link to="/platform" className="hover:text-foreground transition-colors">
+                  Platform
+                </Link>
               </li>
               <li>
-                <a href="#sectors" className="hover:text-foreground transition-colors">
-                  Sectors
-                </a>
-              </li>
-              <li>
-                <a href="#investors" className="hover:text-foreground transition-colors">
-                  For Investors
-                </a>
+                <Link to="/contact-us" className="hover:text-foreground transition-colors">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

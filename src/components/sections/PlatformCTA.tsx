@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 
-export default function CaseStudiesCTA() {
+export default function PlatformCTA() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -22,14 +22,14 @@ export default function CaseStudiesCTA() {
         >
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform{" "}
-            <span className="text-primary">Your Business?</span>
+            Partner with UseKase to embark on{" "}
+            <span className="text-primary">AI initiatives</span>
           </h2>
 
           {/* Subtitle */}
           <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-            Join the businesses that now own their AI capabilities. Let's
-            discuss how the BOT model can work for you.
+            Experience integrated development and outcome-based pricing
+            alignment with a world-class team that owns your success.
           </p>
 
           {/* CTA Button */}
@@ -41,7 +41,7 @@ export default function CaseStudiesCTA() {
           >
             <Button
               size="lg"
-              className="min-w-[200px]"
+              className="min-w-[220px]"
               onClick={() => {
                 window.location.href = "/contact-us";
               }}
@@ -58,7 +58,7 @@ export default function CaseStudiesCTA() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-sm text-muted-foreground"
           >
-            No commitment required. Let's explore if the BOT model is right for you.
+            Ready to transform your business with AI?
           </motion.p>
         </motion.div>
       </div>

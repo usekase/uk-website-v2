@@ -63,13 +63,26 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button size="lg" className="text-base px-8">
+            <Button
+              size="lg"
+              className="text-base px-8"
+              onClick={() => {
+                window.location.href = "/contact-us";
+              }}
+            >
               Let's Start Your AI Journey
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-base px-8">
+            <Button
+              size="lg"
+              variant="outline"
+              className="text-base px-8"
+              onClick={() => {
+                window.open("https://playbook.usekase.ai", "_blank", "noopener,noreferrer");
+              }}
+            >
               <Play className="mr-2 h-5 w-5" />
-              Watch Demo
+              Build AI Strategy
             </Button>
           </motion.div>
 
