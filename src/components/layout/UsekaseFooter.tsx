@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Phone, Linkedin, Facebook, Instagram } from "lucide-react";
 
 export default function UsekaseFooter() {
   const currentYear = new Date().getFullYear();
@@ -92,25 +92,31 @@ export default function UsekaseFooter() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="http://linkedin.com/company/usekase"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61566987854004"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Twitter"
+              aria-label="Facebook"
             >
-              <Twitter className="h-5 w-5" />
+              <Facebook className="h-5 w-5" />
             </a>
             <a
-              href="#"
+              href="http://instagram.com/usekase.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Github"
+              aria-label="Instagram"
             >
-              <Github className="h-5 w-5" />
+              <Instagram className="h-5 w-5" />
             </a>
           </div>
 

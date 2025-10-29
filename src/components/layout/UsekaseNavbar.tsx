@@ -12,6 +12,7 @@ export default function UsekaseNavbar() {
 
   const navLinks = [
     { label: "Case Studies", href: "/case-studies", type: "route" },
+    { label: "Contact Us", href: "/contact-us", type: "route" },
   ];
 
   const scrollToSection = (href: string) => {
@@ -65,24 +66,32 @@ export default function UsekaseNavbar() {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className="relative group px-2.5 py-1.5"
-                >
-                  {/* All 4 corners - always visible when active or hover */}
-                  {/* Top-left corner */}
-                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                  {/* Top-right corner */}
-                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                  {/* Bottom-left corner */}
-                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                  {/* Bottom-right corner */}
-                  <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                  <span className={`text-sm font-medium transition-colors duration-300 ${
+                  className={`relative group px-4 py-2 rounded-md transition-all duration-200 ${
                     isActive
-                      ? 'text-primary'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'hover:bg-primary/10'
+                  }`}
+                >
+                  {/* Show corners only on hover when NOT active */}
+                  {!isActive && (
+                    <>
+                      {/* Top-left corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none" />
+
+                      {/* Top-right corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none" />
+
+                      {/* Bottom-left corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none" />
+
+                      {/* Bottom-right corner */}
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none" />
+                    </>
+                  )}
+
+                  <span className={`text-sm font-medium transition-colors duration-200 ${
+                    isActive
+                      ? 'text-primary-foreground'
                       : isScrolled
                         ? 'text-foreground/80 group-hover:text-foreground'
                         : 'text-white/90 group-hover:text-white'
@@ -161,24 +170,32 @@ export default function UsekaseNavbar() {
                       key={link.label}
                       to={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="relative group px-3 py-2 text-left"
-                    >
-                      {/* All 4 corners - always visible when active or hover */}
-                      {/* Top-left corner */}
-                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                      {/* Top-right corner */}
-                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                      {/* Bottom-left corner */}
-                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                      {/* Bottom-right corner */}
-                      <div className={`transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none ${isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`} />
-
-                      <span className={`text-sm font-medium transition-colors duration-300 ${
+                      className={`relative group px-4 py-2 text-left rounded-md transition-all duration-200 ${
                         isActive
-                          ? 'text-primary'
+                          ? 'bg-primary text-primary-foreground'
+                          : 'hover:bg-primary/10'
+                      }`}
+                    >
+                      {/* Show corners only on hover when NOT active */}
+                      {!isActive && (
+                        <>
+                          {/* Top-left corner */}
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-sm pointer-events-none" />
+
+                          {/* Top-right corner */}
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-sm pointer-events-none" />
+
+                          {/* Bottom-left corner */}
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-sm pointer-events-none" />
+
+                          {/* Bottom-right corner */}
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none" />
+                        </>
+                      )}
+
+                      <span className={`text-sm font-medium transition-colors duration-200 ${
+                        isActive
+                          ? 'text-primary-foreground'
                           : 'text-foreground/80 group-hover:text-foreground'
                       }`}>
                         {link.label}
