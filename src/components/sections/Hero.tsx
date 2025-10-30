@@ -25,11 +25,10 @@ export default function Hero() {
               <div className="border-white/40 size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md" />
               <div className="border-white/40 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
 
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-                Build, Operate, Transfer
-                <br />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                Architecting the AI Economy{" "}
                 <span className="text-secondary">
-                  your AI Future
+                  One Business at a Time
                 </span>
               </h1>
             </div>
@@ -41,20 +40,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-white/90 mb-6"
+            className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
           >
-            We build AI-powered capabilities you can own, not just rent.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-base md:text-lg text-white/80 mb-10 max-w-3xl mx-auto"
-          >
-            In 12-24 months, we design, build, and transfer a complete AI
-            capability to your team — proven, production-ready, and fully yours.
-            No vendor lock-in. No ongoing dependencies. Just real AI ownership.
+            Building intelligent systems that help every company — not just the Fortune 500 — grow faster, operate smarter, and compete on new terms.
           </motion.p>
 
           <motion.div
@@ -67,10 +55,10 @@ export default function Hero() {
               size="lg"
               className="text-base px-8"
               onClick={() => {
-                window.location.href = "/contact-us";
+                window.location.href = "/platform";
               }}
             >
-              Let's Start Your AI Journey
+              Explore the Platform
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
@@ -78,11 +66,11 @@ export default function Hero() {
               variant="outline"
               className="text-base px-8"
               onClick={() => {
-                window.open("https://playbook.usekase.ai", "_blank", "noopener,noreferrer");
+                window.location.href = "/case-studies";
               }}
             >
               <Play className="mr-2 h-5 w-5" />
-              Build AI Strategy
+              See How We Deliver Results
             </Button>
           </motion.div>
 

@@ -1,155 +1,134 @@
-import { cn } from "@/lib/utils";
-import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  IconRocket,
-  IconLibrary,
-  IconShield,
-  IconPuzzle,
-  IconChartBar,
-  IconCloudCheck,
-} from "@tabler/icons-react";
+import { Link } from "react-router-dom";
+import { IconBrain, IconBolt, IconUsers } from "@tabler/icons-react";
 
 export default function KIBOTEngineEnhanced() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const features = [
-    {
-      title: "K-Solutions Reduce Build Time 40-60%",
-      description:
-        "Pre-built, proven modules for common AI workflows mean we don't reinvent the wheel. You get faster delivery without compromising customization.",
-      icon: <IconRocket className="w-8 h-8" />,
-    },
-    {
-      title: "Every Project Adds to the Library",
-      description:
-        "Your unique solutions become reusable K-Solutions for future projects — creating a flywheel of efficiency and innovation.",
-      icon: <IconLibrary className="w-8 h-8" />,
-    },
-    {
-      title: "Embedded Governance & Security",
-      description:
-        "Built-in compliance, monitoring, and security frameworks ensure your AI capability is production-ready from day one.",
-      icon: <IconShield className="w-8 h-8" />,
-    },
-    {
-      title: "Modular Architecture",
-      description:
-        "Like Lego blocks for enterprise AI — flexible, composable modules that create a solution uniquely tailored to your needs.",
-      icon: <IconPuzzle className="w-8 h-8" />,
-    },
-    {
-      title: "Performance Monitoring",
-      description:
-        "Real-time analytics and monitoring built into every solution, ensuring continuous optimization and measurable ROI.",
-      icon: <IconChartBar className="w-8 h-8" />,
-    },
-    {
-      title: "Cloud-Native & Scalable",
-      description:
-        "Built for the cloud from day one. Scale seamlessly as your business grows without architectural rewrites.",
-      icon: <IconCloudCheck className="w-8 h-8" />,
-    },
-  ];
-
   return (
-    <section id="platform" className="pt-12 pb-24 bg-white dark:bg-gray-900" ref={ref}>
+    <section id="platform" className="py-24 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-6xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            The <span className="text-primary">KIBOT Engine</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+            Applied Intelligence Meets <span className="text-primary">Practical Execution</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Our proprietary framework combines reusable AI modules (K-Solutions)
-            with custom development to accelerate delivery while maintaining full
-            customization. Think of it as Lego blocks for enterprise AI — but the
-            final structure is uniquely yours.
+          <p className="text-2xl text-center text-foreground font-semibold mb-12 max-w-4xl mx-auto">
+            We bring together forward-deployed experts and our proprietary ARCH platform to turn AI strategy into working systems.
           </p>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 relative z-10 max-w-7xl mx-auto">
-            {features.map((feature, index) => (
-              <Feature key={feature.title} {...feature} index={index} />
-            ))}
+          {/* Two-column layout for ARCH and K-Solutions */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="relative group"
+            >
+              {/* Corner decorations - only visible on hover */}
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
+                  <IconBrain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">ARCH Platform</h3>
+                <p className="text-muted-foreground mb-4">
+                  Our proprietary framework that guides every transformation through four disciplined stages.
+                </p>
+                <div className="text-sm font-semibold text-primary">
+                  How we deliver transformation
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative group"
+            >
+              {/* Corner decorations - only visible on hover */}
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
+                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
+                  <IconBolt className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Keystone (K) Solutions</h3>
+                <p className="text-muted-foreground mb-4">
+                  Proven accelerators like our AI Playbook that combine real-world experience with reusable intelligence.
+                </p>
+                <div className="text-sm font-semibold text-primary">
+                  How we make it faster, smarter, and open to all
+                </div>
+              </div>
+            </motion.div>
           </div>
+
+          {/* Value Proposition */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative group"
+          >
+            {/* Corner decorations - only visible on hover */}
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border-2 border-transparent group-hover:border-border transition-colors shadow-lg">
+              <div className="flex items-start gap-6">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <IconUsers className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3">Your Advantage</h3>
+                  <p className="text-lg text-muted-foreground">
+                    Each K-Solution shortens time-to-value and captures what works across industries — allowing us to deliver results faster while building your own foundation for future growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12"
+          className="text-center"
         >
-          <Card
-            variant="corners"
-            className="max-w-3xl mx-auto bg-primary/10"
-          >
-            <div className="p-4">
-              <p className="text-lg">
-                The result? Faster builds, lower costs, and battle-tested
-                components — while still delivering a solution that's 100%
-                tailored to your needs.
-              </p>
-            </div>
-          </Card>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link to="/platform">
+              <Button size="lg">
+                Explore ARCH →
+              </Button>
+            </Link>
+            <Link to="/solutions">
+              <Button variant="secondary" size="lg">
+                View Keystone Solutions →
+              </Button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
-
-const Feature = ({
-  title,
-  description,
-  icon,
-  index,
-}: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  index: number;
-}) => {
-  return (
-    <div
-      className={cn(
-        "flex flex-col lg:border-r py-10 relative group/feature border-border",
-        (index === 0 || index === 3) && "lg:border-l border-border",
-        index < 3 && "lg:border-b border-border"
-      )}
-    >
-      {index < 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
-      )}
-      {index >= 3 && (
-        <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/10 pointer-events-none" />
-      )}
-      <div className="mb-4 relative z-10 px-10 text-primary">
-        {icon}
-      </div>
-      <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200" />
-        <div className="text-lg font-bold mb-2 relative z-10 px-10">
-          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
-            {title}
-          </span>
-        </div>
-        <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
-          {description}
-        </p>
-      </div>
-    </div>
-  );
-};

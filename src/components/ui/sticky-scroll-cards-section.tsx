@@ -3,7 +3,10 @@ import { useState, useEffect, useRef } from 'react';
 // --- Types ---
 interface StickyFeature {
   title: string;
+  subtitle?: string;
   description: string;
+  details?: string;
+  finalComment?: string;
   imageUrl: string;
   bgColor: string;
   textColor: string;
@@ -105,8 +108,8 @@ const AnimatedHeader = ({ title, subtitle }: { title: string; subtitle: string }
 // This is the main component that orchestrates everything.
 export function StickyFeatureSection({
   features = defaultFeatures,
-  headerTitle = "Uncover Insights, Expose Nothing",
-  headerSubtitle = "We aim to make on-device AI friction-free and production-ready"
+  headerTitle,
+  headerSubtitle
 }: StickyFeatureSectionProps) {
   return (
     <div className="bg-gray-50 dark:bg-gray-900 font-sans">
@@ -114,9 +117,11 @@ export function StickyFeatureSection({
       <div className="px-[5%]">
         <div className="max-w-7xl mx-auto">
           {/* The main section for the features */}
-          <section className="pt-12 pb-24 md:pt-16 md:pb-48 flex flex-col items-center">
+          <section className="pt-12 pb-24 md:pt-12 md:pb-24 flex flex-col items-center">
 
-            <AnimatedHeader title={headerTitle} subtitle={headerSubtitle} />
+            {headerTitle && headerSubtitle && (
+              <AnimatedHeader title={headerTitle} subtitle={headerSubtitle} />
+            )}
 
             {/* The container for the sticky cards */}
             <div className="w-full">
@@ -138,9 +143,30 @@ export function StickyFeatureSection({
 
                     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 md:gap-8 p-8 md:p-12">
                       {/* Card Content */}
-                      <div className="flex flex-col justify-center">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-4 text-primary">{feature.title}</h3>
-                        <p className={feature.textColor}>{feature.description}</p>
+                      <div className="flex flex-col justify-center space-y-4">
+                        <h3 className="text-2xl md:text-3xl font-bold text-primary">{feature.title}</h3>
+
+                        {feature.subtitle && (
+                          <h4 className="text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200">
+                            {feature.subtitle}
+                          </h4>
+                        )}
+
+                        <p className="text-base md:text-lg text-gray-700 dark:text-gray-300">
+                          {feature.description}
+                        </p>
+
+                        {feature.details && (
+                          <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 italic">
+                            {feature.details}
+                          </p>
+                        )}
+
+                        {feature.finalComment && (
+                          <p className="text-base md:text-lg font-medium text-gray-800 dark:text-gray-200">
+                            {feature.finalComment}
+                          </p>
+                        )}
                       </div>
 
                       {/* Card Image */}

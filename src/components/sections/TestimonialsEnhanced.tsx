@@ -46,7 +46,7 @@ export default function TestimonialsEnhanced() {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-900" ref={ref}>
+    <section className="py-24 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

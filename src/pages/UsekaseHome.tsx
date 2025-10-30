@@ -4,7 +4,6 @@ import Hero from "@/components/sections/Hero";
 import ProblemSolutionEnhanced from "@/components/sections/ProblemSolutionEnhanced";
 import BOTModelEnhanced from "@/components/sections/BOTModelEnhanced";
 import KIBOTEngineEnhanced from "@/components/sections/KIBOTEngineEnhanced";
-import ValuePropositionEnhanced from "@/components/sections/ValuePropositionEnhanced";
 import SectorsEnhanced from "@/components/sections/SectorsEnhanced";
 import FlywheelFunding from "@/components/sections/FlywheelFunding";
 import TestimonialsEnhanced from "@/components/sections/TestimonialsEnhanced";
@@ -18,9 +17,8 @@ export default function UsekaseHome() {
         <Hero />
         <ProblemSolutionEnhanced />
         <BOTModelEnhanced />
-        <KIBOTEngineEnhanced />
-        <ValuePropositionEnhanced />
         <SectorsEnhanced />
+        <KIBOTEngineEnhanced />
         <FlywheelFunding />
         <TestimonialsEnhanced />
         <FinalCTA />

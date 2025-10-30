@@ -157,7 +157,7 @@ export default function SectorsEnhanced() {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Who We <span className="text-primary">Work With</span>
+            Case Study <span className="text-primary">Highlights</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We partner with enterprises across diverse industries to build

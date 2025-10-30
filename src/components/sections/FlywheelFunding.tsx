@@ -1,111 +1,189 @@
+import { cn } from "@/lib/utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import {
+  IconTarget,
+  IconClipboardCheck,
+  IconHandGrab,
+  IconChartLine,
+  IconSearch,
+  IconUsers,
+  IconRocket,
+} from "@tabler/icons-react";
 
 export default function FlywheelFunding() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const stats = [
+  const features = [
     {
-      label: "Project Value",
-      value: "≤ $1M",
-      unit: "SGD",
+      title: "Ambitious Businesses",
+      description: "Screened for readiness and transformative potential.",
+      icon: <IconTarget className="w-8 h-8" />,
     },
     {
-      label: "Duration",
-      value: "≤ 24",
-      unit: "months",
+      title: "Assessment First",
+      description: "ARCH \"Assess\" phase validates business case and funding eligibility.",
+      icon: <IconClipboardCheck className="w-8 h-8" />,
     },
     {
-      label: "Client EBITDA Uplift",
-      value: "≈ 40%",
-      unit: "average",
+      title: "Shared Investment",
+      description: "Usekase co-funds the build and operation based on expected ROI.",
+      icon: <IconHandGrab className="w-8 h-8" />,
     },
     {
-      label: "Investor Return",
-      value: "≈ 40%",
-      unit: "over 24 months",
+      title: "Self-Funded Growth",
+      description: "Capabilities repay themselves through measurable uplift.",
+      icon: <IconChartLine className="w-8 h-8" />,
     },
   ];
 
   return (
-    <section id="investors" className="py-24 bg-primary/5" ref={ref}>
+    <section id="investors" className="py-24 bg-white dark:bg-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-5xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Funding the <span className="text-primary">Transformation</span>
+            Funding Ambition — <span className="text-primary">One Transformation at a Time</span>
           </h2>
-          <p className="text-lg text-muted-foreground mb-6">
-            The Usekase Flywheel is a unique financing model that aligns clients,
-            investors, and Usekase around measurable business outcomes.
+          <p className="text-2xl text-foreground font-semibold mb-12 max-w-3xl mx-auto">
+            Usekase backs the most ambitious businesses ready to scale with AI.
           </p>
-          <p className="text-base text-muted-foreground">
-            Investors fund the AI capability build. Clients pay back from the
-            EBITDA uplift the AI generates. Everyone wins when the AI delivers
-            real value.
-          </p>
+
+          {/* Process Flow - Timeline Style */}
+          <div className="max-w-4xl mx-auto mb-16 relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute top-8 left-0 right-0 h-0.5 bg-primary/20" style={{ top: '2rem' }} />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
+                  <span className="text-sm font-bold text-white">1</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Assess</h3>
+                <p className="text-muted-foreground">
+                  We validate your opportunity and determine the right funding model through our ARCH framework.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
+                  <span className="text-sm font-bold text-white">2</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Co-Fund</h3>
+                <p className="text-muted-foreground">
+                  If selected, we invest alongside you — in proportion to the outcomes and risk we agree on together.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-center"
+              >
+                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
+                  <span className="text-sm font-bold text-white">3</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3">Results</h3>
+                <p className="text-muted-foreground">
+                  AI capabilities that fund themselves through measurable performance gains.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+
+          <div className="border-t border-border pt-8 mb-16">
+            <p className="text-2xl font-bold text-foreground">
+              We don't just finance innovation — <span className="text-primary">we make it accountable.</span>
+            </p>
+          </div>
         </motion.div>
 
-        <div className="max-w-5xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {stats.map((stat, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-              className="relative group"
-            >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
-
-              <Card className="text-center border-transparent group-hover:border-border transition-colors">
-                <CardContent className="p-6">
-                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs uppercase tracking-wide text-muted-foreground mb-2">
-                    {stat.unit}
-                  </div>
-                  <div className="text-sm font-semibold">{stat.label}</div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 max-w-7xl mx-auto">
+            {features.map((feature, index) => (
+              <Feature key={feature.title} {...feature} index={index} />
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center"
+          className="text-center mt-12"
         >
-          <Card
-            variant="corners"
-            className="max-w-3xl mx-auto bg-primary/10"
-          >
-            <CardContent className="p-4">
-              <h3 className="text-2xl font-bold mb-4">
-                Transformation that funds itself
-              </h3>
-              <p className="text-muted-foreground">
-                Clients get AI capabilities without large upfront costs. Investors
-                get attractive returns tied to real business performance. Usekase
-                gets paid for delivering measurable value.
-              </p>
-            </CardContent>
-          </Card>
+          <div className="max-w-3xl mx-auto bg-muted/50 rounded-lg p-6">
+            <p className="text-lg font-semibold text-foreground">
+              <span className="font-bold">Shared risk. Shared return. Real transformation.</span>
+              <br />
+              That's how Usekase funds the future of business growth.
+            </p>
+          </div>
         </motion.div>
       </div>
     </section>
   );
 }
+
+const Feature = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature border-border",
+        index === 0 && "lg:border-l border-border",
+        "lg:border-b border-border"
+      )}
+    >
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
+
+      <div className="mb-4 relative z-10 px-10">
+        <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center text-white">
+          {icon}
+        </div>
+      </div>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200" />
+        <div className="text-lg font-bold mb-2 relative z-10 px-10">
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
+            {title}
+          </span>
+        </div>
+        <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};
