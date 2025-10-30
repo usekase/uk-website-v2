@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -8,9 +7,6 @@ import {
   IconClipboardCheck,
   IconHandGrab,
   IconChartLine,
-  IconSearch,
-  IconUsers,
-  IconRocket,
 } from "@tabler/icons-react";
 
 export default function FlywheelFunding() {
