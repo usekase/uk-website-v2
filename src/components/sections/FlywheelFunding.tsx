@@ -45,8 +45,9 @@ export default function FlywheelFunding() {
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Funding Ambition — <span className="text-primary">One Transformation at a Time</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-black dark:text-black">
+            <span className="text-primary">Funding</span> Ambition<br />
+            <span className="text-primary">One</span> Transformation at a Time
           </h2>
           <p className="text-2xl text-foreground font-semibold mb-12 max-w-3xl mx-auto">
             Usekase backs the most ambitious businesses ready to scale with AI.
@@ -62,10 +63,10 @@ export default function FlywheelFunding() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
-                  <span className="text-sm font-bold text-white">1</span>
+                <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg transition-colors duration-200">
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200">1</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Assess</h3>
                 <p className="text-muted-foreground">
@@ -77,10 +78,10 @@ export default function FlywheelFunding() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
-                  <span className="text-sm font-bold text-white">2</span>
+                <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg transition-colors duration-200">
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200">2</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Co-Fund</h3>
                 <p className="text-muted-foreground">
@@ -92,10 +93,10 @@ export default function FlywheelFunding() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg">
-                  <span className="text-sm font-bold text-white">3</span>
+                <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mx-auto mb-4 relative z-10 shadow-lg transition-colors duration-200">
+                  <span className="text-sm font-bold text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200">3</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Results</h3>
                 <p className="text-muted-foreground">
@@ -107,7 +108,7 @@ export default function FlywheelFunding() {
 
           <div className="border-t border-border pt-8 mb-16">
             <p className="text-2xl font-bold text-foreground">
-              We don't just finance innovation — <span className="text-primary">we make it accountable.</span>
+              We don't just finance innovation — we make it <span className="text-primary">accountable.</span>
             </p>
           </div>
         </motion.div>
@@ -165,7 +166,7 @@ const Feature = ({
       <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
 
       <div className="mb-4 relative z-10 px-10">
-        <div className="w-14 h-14 rounded-lg bg-primary flex items-center justify-center text-white">
+        <div className="w-14 h-14 rounded-lg bg-gray-300 dark:bg-gray-600 group-hover/feature:bg-primary flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover/feature:text-white transition-colors duration-200">
           {icon}
         </div>
       </div>

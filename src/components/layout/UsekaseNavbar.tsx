@@ -46,11 +46,7 @@ export default function UsekaseNavbar() {
   }, [isHomePage]);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? "bg-white border-b border-border shadow-sm"
-        : "bg-black/20 backdrop-blur-md border-b border-white/10"
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-border shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -93,9 +89,7 @@ export default function UsekaseNavbar() {
                   <span className={`text-sm font-medium transition-colors duration-200 ${
                     isActive
                       ? 'text-primary-foreground'
-                      : isScrolled
-                        ? 'text-foreground/80 group-hover:text-foreground'
-                        : 'text-white/90 group-hover:text-white'
+                      : 'text-foreground/80 group-hover:text-foreground'
                   }`}>
                     {link.label}
                   </span>
@@ -119,11 +113,7 @@ export default function UsekaseNavbar() {
                   {/* Bottom-right corner */}
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-2.5 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-sm pointer-events-none" />
 
-                  <span className={`text-sm font-medium transition-colors duration-300 ${
-                    isScrolled
-                      ? 'text-foreground/80 group-hover:text-foreground'
-                      : 'text-white/90 group-hover:text-white'
-                  }`}>
+                  <span className="text-sm font-medium transition-colors duration-300 text-foreground/80 group-hover:text-foreground">
                     {link.label}
                   </span>
                 </button>
@@ -146,11 +136,7 @@ export default function UsekaseNavbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`lg:hidden p-2 rounded-md transition-colors ${
-              isScrolled
-                ? 'hover:bg-muted text-foreground'
-                : 'hover:bg-white/10 text-white'
-            }`}
+            className="lg:hidden p-2 rounded-md transition-colors hover:bg-muted text-foreground"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

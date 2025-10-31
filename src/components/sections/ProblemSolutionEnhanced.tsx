@@ -16,10 +16,10 @@ export default function ProblemSolutionEnhanced() {
           transition={{ duration: 0.6 }}
           className="max-w-6xl mx-auto mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center leading-tight">
-            See the Results.<br />
-            Own the Capability.<br />
-            <span className="text-primary">Scale the Advantage.</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center leading-tight text-black dark:text-black">
+            <span className="text-primary">See</span> the Results.<br />
+            <span className="text-primary">Own</span> the Capability.<br />
+            <span className="text-primary">Scale</span> the Advantage.
           </h2>
 
           {/* Three Value Props */}
@@ -37,8 +37,8 @@ export default function ProblemSolutionEnhanced() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
-                  <IconEye className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
+                  <IconEye className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">See the Results</h3>
                 <p className="text-sm text-muted-foreground">
@@ -60,8 +60,8 @@ export default function ProblemSolutionEnhanced() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
-                  <IconShield className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
+                  <IconShield className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Own the Capability</h3>
                 <p className="text-sm text-muted-foreground">
@@ -83,8 +83,8 @@ export default function ProblemSolutionEnhanced() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center mb-4">
-                  <IconTrendingUp className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
+                  <IconTrendingUp className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-xl font-bold mb-2">Scale the Advantage</h3>
                 <p className="text-sm text-muted-foreground">

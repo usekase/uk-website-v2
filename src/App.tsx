@@ -3,7 +3,7 @@ import UsekaseHome from "./pages/UsekaseHome";
 import CaseStudies from "./pages/CaseStudies";
 import Platform from "./pages/Platform";
 import ContactUs from "./pages/ContactUs";
-import Navbar from "./components/Navbar";
+import UsekaseNavbar from "./components/layout/UsekaseNavbar";
 import Home from "./pages/Home";
 import ShadcnExamples from "./pages/ShadcnExamples";
 import TweakcnExamples from "./pages/TweakcnExamples";
@@ -27,7 +27,7 @@ function App() {
         {/* Component Demo Pages */}
         <Route path="/demos/*" element={
           <div className="min-h-screen bg-background">
-            <Navbar />
+            <UsekaseNavbar />
             <main>
               <Routes>
                 <Route path="/" element={<Home />} />

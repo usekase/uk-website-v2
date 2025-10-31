@@ -40,16 +40,13 @@ export default function KIBOTEngineEnhanced() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
-                  <IconBrain className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors duration-200">
+                  <IconBrain className="w-8 h-8 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">ARCH Platform</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground">
                   Our proprietary framework that guides every transformation through four disciplined stages.
                 </p>
-                <div className="text-sm font-semibold text-primary">
-                  How we deliver transformation
-                </div>
               </div>
             </motion.div>
 
@@ -66,16 +63,13 @@ export default function KIBOTEngineEnhanced() {
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
               <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
-                  <IconBolt className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors duration-200">
+                  <IconBolt className="w-8 h-8 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Keystone (K) Solutions</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground">
                   Proven accelerators like our AI Playbook that combine real-world experience with reusable intelligence.
                 </p>
-                <div className="text-sm font-semibold text-primary">
-                  How we make it faster, smarter, and open to all
-                </div>
               </div>
             </motion.div>
           </div>
