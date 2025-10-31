@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Facebook, Instagram } from "lucide-react";
+import { Mail, Linkedin, Facebook, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function UsekaseFooter() {
@@ -9,8 +9,8 @@ export default function UsekaseFooter() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
-          <div>
-            <div className="flex items-center mb-4">
+          <div className="text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start mb-4">
               <img src="/uk-logo.png" alt="Usekase" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
@@ -22,7 +22,7 @@ export default function UsekaseFooter() {
           </div>
 
           {/* Locations */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="font-semibold mb-4">Locations</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Singapore</li>
@@ -32,32 +32,23 @@ export default function UsekaseFooter() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
                   href="mailto:hello@usekase.ai"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                  className="flex items-center justify-center md:justify-start gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Mail className="h-4 w-4" />
                   hello@usekase.ai
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+6512345678"
-                  className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Phone className="h-4 w-4" />
-                  +65 1234 5678
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center md:text-left">
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
@@ -80,13 +71,13 @@ export default function UsekaseFooter() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="text-sm text-muted-foreground">
             © {currentYear} Usekase Pte Ltd. All rights reserved.
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             <a
               href="http://linkedin.com/company/usekase"
               target="_blank"
@@ -117,7 +108,7 @@ export default function UsekaseFooter() {
           </div>
 
           {/* Legal Links */}
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">
               Privacy Policy
             </a>

@@ -142,14 +142,14 @@ export default function ContactUs() {
     <div className="min-h-screen bg-background">
       <UsekaseNavbar />
 
-      <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <Card variant="corners" className="p-8 md:p-12 lg:p-16 bg-white dark:bg-zinc-900">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <main className="pt-32 pb-12 px-3 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <Card variant="corners" className="p-4 sm:p-8 md:p-12 lg:p-16 bg-white dark:bg-zinc-900">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
               {/* Left Column - Contact Information */}
-              <div className="space-y-12">
+              <div className="space-y-6 sm:space-y-12">
                 <div>
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-8">
                     Let's talk about{" "}
                     <span className="text-primary">your AI future.</span>
                   </h1>
@@ -175,7 +175,7 @@ export default function ContactUs() {
               </div>
 
               {/* Social Media Icons */}
-              <div className="flex items-center gap-6 pt-8">
+              <div className="flex items-center gap-6 pt-4 sm:pt-8">
                 <a
                   href="http://linkedin.com/company/usekase"
                   target="_blank"
@@ -383,7 +383,7 @@ export default function ContactUs() {
                 )}
 
                 {/* Submit Button */}
-                <div className="pt-4">
+                <div className="pt-2 sm:pt-4">
                   <Button
                     type="submit"
                     disabled={isSubmitting}

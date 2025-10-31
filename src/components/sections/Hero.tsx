@@ -66,11 +66,11 @@ export default function Hero() {
               variant="outline"
               className="text-base px-8"
               onClick={() => {
-                window.location.href = "/case-studies";
+              window.open("https://playbook.usekase.ai", "_blank");
               }}
             >
               <Play className="mr-2 h-5 w-5" />
-              See How We Deliver Results
+              Build your AI Strategy
             </Button>
           </motion.div>
 

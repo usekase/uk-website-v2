@@ -132,7 +132,7 @@ export default function UsekaseNavbar() {
             className="lg:hidden border-t bg-white"
           >
             <div className="container mx-auto px-4 py-4">
-              <div className="flex flex-col space-y-2">
+              <div className="flex flex-col space-y-2 items-center">
                 {navLinks.map((link) => {
                   const isActive = link.type === "route" && location.pathname === link.href;
 
@@ -141,7 +141,7 @@ export default function UsekaseNavbar() {
                       key={link.label}
                       to={link.href}
                       onClick={() => setIsOpen(false)}
-                      className={`relative group px-4 py-2 text-left rounded-md transition-all duration-200 ${
+                      className={`relative group px-4 py-2 text-center rounded-md transition-all duration-200 w-full max-w-xs ${
                         isActive
                           ? 'bg-primary text-primary-foreground'
                           : 'hover:bg-primary/10'
@@ -176,7 +176,7 @@ export default function UsekaseNavbar() {
                     <button
                       key={link.label}
                       onClick={() => scrollToSection(link.href)}
-                      className="relative group px-3 py-2 text-left"
+                      className="relative group px-3 py-2 text-center w-full max-w-xs"
                     >
                       {/* All 4 corners on hover */}
                       {/* Top-left corner */}
@@ -197,9 +197,13 @@ export default function UsekaseNavbar() {
                     </button>
                   );
                 })}
-                <div className="pt-4">
+
+                {/* Divider */}
+                <div className="w-full max-w-xs border-t border-border my-2"></div>
+
+                <div className="pt-2 w-full flex justify-center">
                   <Button
-                    className="w-full"
+                    className="w-full max-w-xs"
                     size="lg"
                     onClick={() => {
                       window.location.href = "/contact-us";

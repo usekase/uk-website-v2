@@ -34,8 +34,8 @@ export function CaseStudyCard({
         className={cn(
           "relative overflow-hidden border bg-card transition-all duration-300 ease-in-out cursor-pointer",
           isHovered
-            ? "h-auto min-h-[200px] border-primary shadow-lg shadow-primary/20 bg-primary/5"
-            : "h-32 border-border hover:border-primary/50"
+            ? "h-auto min-h-[200px] md:min-h-[200px] border-primary shadow-lg shadow-primary/20 bg-primary/5"
+            : "h-auto md:h-32 border-border hover:border-primary/50"
         )}
       >
         {/* Corner brackets that appear on hover */}
@@ -52,24 +52,24 @@ export function CaseStudyCard({
           </>
         )}
 
-        {/* Content - Horizontal Layout */}
-        <div className="flex h-full">
-          {/* Left Side - Image */}
-          <div className="relative w-48 md:w-64 flex-shrink-0 overflow-hidden">
+        {/* Content - Vertical on mobile, Horizontal on desktop */}
+        <div className="flex flex-col md:flex-row h-full">
+          {/* Top/Left Side - Image */}
+          <div className="relative w-full md:w-64 h-48 md:h-auto flex-shrink-0 overflow-hidden">
             <img
               src={image}
               alt={industry}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/20" />
+            <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent to-card/20" />
             <div className={cn(
               "absolute inset-0 transition-colors duration-300",
               isHovered ? "bg-primary/5" : "bg-foreground/10"
             )} />
           </div>
 
-          {/* Right Side - Content */}
-          <div className="flex flex-col flex-1 px-6 md:px-8 py-6">
+          {/* Bottom/Right Side - Content */}
+          <div className="flex flex-col flex-1 px-4 md:px-6 lg:px-8 py-4 md:py-6">
             {/* Header: Industry & Title */}
             <div className="flex-1 min-w-0 mb-3">
               <div className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-1">

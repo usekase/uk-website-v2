@@ -95,7 +95,7 @@ export default function PlatformCapabilities() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto justify-items-center md:justify-items-stretch"
         >
           {capabilities.map((capability) => {
             const Icon = capability.icon;
@@ -103,7 +103,7 @@ export default function PlatformCapabilities() {
               <motion.div
                 key={capability.id}
                 variants={itemVariants}
-                className="relative group"
+                className="relative group w-full max-w-md md:max-w-none"
               >
                 {/* Corner decorations - only visible on hover */}
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
@@ -113,7 +113,7 @@ export default function PlatformCapabilities() {
 
                 <div className="p-6 bg-white dark:bg-zinc-900 rounded-lg border border-transparent group-hover:border-border transition-colors">
                   {/* Number Badge */}
-                  <div className="absolute -top-3 -left-3 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-3 w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-lg shadow-md">
                     {capability.id}
                   </div>
 
