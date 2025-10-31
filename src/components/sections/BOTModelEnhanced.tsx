@@ -62,7 +62,7 @@ export default function BOTModelEnhanced() {
               {/* Photo and Attribution */}
               <div className="flex flex-col items-center text-center">
                 <img
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&auto=format&fit=crop"
+                  src="https://media.licdn.com/dms/image/v2/D4D03AQFaoqTgI8kBQw/profile-displayphoto-shrink_800_800/B4DZaF110HH4Ag-/0/1746002206743?e=1763596800&v=beta&t=Y-GrA4S8I8mfbQ7V9RbtM0wVsD6GBcKB5dI-_whi1dA"
                   alt="Martin Gents"
                   className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover mb-3 border-2 border-zinc-200 dark:border-zinc-600"
                 />
@@ -79,9 +79,9 @@ export default function BOTModelEnhanced() {
               {/* Quote */}
               <blockquote className="flex items-center">
                 <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed italic">
-                  "By working across all three layers, Usekase delivers solutions
-                  that are globally informed, operationally grounded, and uniquely
-                  yours."
+                  "By working across all three layers, Usekase delivers
+                  solutions that are globally informed, operationally grounded,
+                  and uniquely yours."
                 </p>
               </blockquote>
             </div>

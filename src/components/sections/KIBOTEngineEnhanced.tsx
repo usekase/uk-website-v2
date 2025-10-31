@@ -115,11 +115,6 @@ export default function KIBOTEngineEnhanced() {
                 Explore ARCH →
               </Button>
             </Link>
-            <Link to="/solutions">
-              <Button variant="secondary" size="lg">
-                View Keystone Solutions →
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </div>

@@ -3,6 +3,8 @@ import UsekaseHome from "./pages/UsekaseHome";
 import CaseStudies from "./pages/CaseStudies";
 import Platform from "./pages/Platform";
 import ContactUs from "./pages/ContactUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 import UsekaseNavbar from "./components/layout/UsekaseNavbar";
 import Home from "./pages/Home";
 import ShadcnExamples from "./pages/ShadcnExamples";
@@ -23,6 +25,8 @@ function App() {
         <Route path="/case-studies" element={<CaseStudies />} />
         <Route path="/platform" element={<Platform />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
 
         {/* Component Demo Pages */}
         <Route path="/demos/*" element={

@@ -42,7 +42,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
           >
-            Building intelligent systems that help every company — not just the Fortune 500 — grow faster, operate smarter, and compete on new terms.
+            Building intelligent systems that help every company grow faster, operate smarter, and compete on new terms.
           </motion.p>
 
           <motion.div

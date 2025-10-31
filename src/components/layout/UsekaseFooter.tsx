@@ -16,9 +16,9 @@ export default function UsekaseFooter() {
             <p className="text-sm text-muted-foreground mb-4">
               Building AI capabilities you can own, not just rent.
             </p>
-            <div className="text-sm text-muted-foreground">
+            {/* <div className="text-sm text-muted-foreground">
               <p className="font-semibold mb-2">Usekase Pte Ltd</p>
-            </div>
+            </div> */}
           </div>
 
           {/* Locations */}
@@ -109,12 +109,12 @@ export default function UsekaseFooter() {
 
           {/* Legal Links */}
           <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">
               Privacy Policy
-            </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            </Link>
+            <Link to="/terms-of-service" className="hover:text-foreground transition-colors">
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
