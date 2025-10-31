@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -6,9 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function UsekaseNavbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
 
   const navLinks = [
     { label: "Case Studies", href: "/case-studies", type: "route" },
@@ -23,27 +21,6 @@ export default function UsekaseNavbar() {
       setIsOpen(false);
     }
   };
-
-  useEffect(() => {
-    if (!isHomePage) {
-      setIsScrolled(true);
-      return;
-    }
-
-    const handleScroll = () => {
-      const solutionsSection = document.querySelector("#solutions");
-      if (solutionsSection) {
-        const rect = solutionsSection.getBoundingClientRect();
-        // Transition when solutions section is about to come into view
-        setIsScrolled(rect.top <= 100);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // Check initial position
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isHomePage]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-border shadow-sm">
