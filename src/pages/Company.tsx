@@ -3,6 +3,7 @@ import UsekaseFooter from "@/components/layout/UsekaseFooter";
 import CompanyHero from "@/components/sections/CompanyHero";
 import CompanyMission from "@/components/sections/CompanyMission";
 import CompanyTeam from "@/components/sections/CompanyTeam";
+import CompanyImageComparison from "@/components/sections/CompanyImageComparison";
 import CompanyDifference from "@/components/sections/CompanyDifference";
 
 export default function Company() {
@@ -13,6 +14,7 @@ export default function Company() {
         <CompanyHero />
         <CompanyMission />
         <CompanyTeam />
+        <CompanyImageComparison />
         <CompanyDifference />
       </main>
       <UsekaseFooter />
