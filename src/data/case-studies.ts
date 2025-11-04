@@ -42,22 +42,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     slug: "manufacturing-supply-chain",
   },
-  {
-    id: "retail-demand-planning",
-    industry: "Retail",
-    title: "Retail – Demand Planning AI",
-    image:
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2400&auto=format&fit=crop",
-    challenge: "Stockouts, overstock, poor seasonal forecasting.",
-    solution:
-      "Built custom demand planning AI with seasonal intelligence; handed over complete system with training and documentation.",
-    outcomes: [
-      "+40% forecast accuracy",
-      "–30% stockout incidents",
-      "Self-sufficient operations team",
-    ],
-    slug: "retail-demand-planning",
-  },
 ];
 
 export const testimonials = [

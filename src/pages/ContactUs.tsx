@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import UsekaseNavbar from "@/components/layout/UsekaseNavbar";
 import UsekaseFooter from "@/components/layout/UsekaseFooter";
-import { Linkedin as LinkedinIcon, Facebook, Instagram, AlertCircle, CheckCircle2, User, Building2, Briefcase, Target, Clock } from "lucide-react";
+import { Linkedin as LinkedinIcon, Facebook, Instagram, AlertCircle, CheckCircle2, User, Building2, Users, Target, Clock } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface FormData {
@@ -54,8 +54,8 @@ export default function ContactUs() {
       newErrors.company = "Company is required";
     }
 
-    if (!formData.role.trim()) {
-      newErrors.role = "Role is required";
+    if (!formData.role.trim() || formData.role === "") {
+      newErrors.role = "Please select how you're reaching out";
     }
 
     if (!formData.objective.trim()) {
@@ -74,7 +74,7 @@ export default function ContactUs() {
 
   // Handle input changes
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -265,25 +265,33 @@ export default function ContactUs() {
                   )}
                 </div>
 
-                {/* Role Field */}
+                {/* I'm reaching out as Field */}
                 <div className="space-y-2">
                   <Label htmlFor="role" className="text-base font-medium">
-                    Role <span className="text-destructive">*</span>
+                    I'm reaching out as a <span className="text-destructive">*</span>
                   </Label>
                   <div className="relative">
-                    <Briefcase className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                    <Input
+                    <Users className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none z-10" />
+                    <select
                       id="role"
                       name="role"
-                      type="text"
                       value={formData.role}
                       onChange={handleChange}
-                      placeholder="CTO, Product Manager, etc."
-                      className={`pl-10 h-12 placeholder:text-muted-foreground/40 ${
-                        errors.role ? "border-destructive" : ""
-                      }`}
+                      className={`w-full h-12 pl-10 pr-10 rounded-md border-2 bg-background text-foreground appearance-none cursor-pointer transition-colors ${
+                        errors.role ? "border-destructive" : "border-input hover:border-primary"
+                      } ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
                       disabled={isSubmitting}
-                    />
+                    >
+                      <option value="">Select an option</option>
+                      <option value="Business">Business</option>
+                      <option value="Partner">Partner</option>
+                      <option value="Investor">Investor</option>
+                    </select>
+                    <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                      <svg className="h-5 w-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
                   </div>
                   {errors.role && (
                     <p className="text-sm text-destructive flex items-center gap-1">

@@ -24,8 +24,8 @@ export default function CaseStudies() {
         <CaseStudiesGrid />
         <CaseStudiesMetrics />
 
-        {/* Testimonials Section */}
-        <section
+        {/* Testimonials Section - Hidden */}
+        {/* <section
           ref={testimonialsRef}
           className="py-24 bg-white dark:bg-zinc-800"
         >
@@ -52,7 +52,7 @@ export default function CaseStudies() {
               <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
             </motion.div>
           </div>
-        </section>
+        </section> */}
 
         <CaseStudiesCTA />
       </main>

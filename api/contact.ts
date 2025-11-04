@@ -6,7 +6,7 @@ import Mailgun from 'mailgun.js';
 interface ContactFormData {
   name: string;
   company: string;
-  role: string;
+  role: string; // "Business", "Partner", or "Investor"
   objective: string;
   timeline: string;
 }

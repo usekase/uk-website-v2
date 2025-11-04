@@ -46,7 +46,7 @@ export default function CaseStudiesMetrics() {
   return (
     <section
       ref={ref}
-      className="py-20 bg-zinc-50 dark:bg-zinc-900 border-y"
+      className="py-20 bg-white dark:bg-zinc-900 border-y"
     >
       <div className="container mx-auto px-4">
         <motion.div
