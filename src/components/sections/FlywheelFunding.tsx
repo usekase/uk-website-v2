@@ -26,7 +26,7 @@ export default function FlywheelFunding() {
     },
     {
       title: "Shared Investment",
-      description: "Usekase co-funds the build and operation based on expected ROI.",
+      description: "UseKase co-funds the build and operation based on expected ROI.",
       icon: <IconHandGrab className="w-8 h-8" />,
     },
     {
@@ -50,7 +50,7 @@ export default function FlywheelFunding() {
             <span className="text-primary">One</span> Transformation at a Time
           </h2>
           <p className="text-2xl text-foreground font-semibold mb-12 max-w-3xl mx-auto">
-            Usekase backs the most ambitious businesses ready to scale with AI.
+            UseKase backs the most ambitious businesses ready to scale with AI.
           </p>
 
           {/* Process Flow - Timeline Style */}
@@ -125,20 +125,6 @@ export default function FlywheelFunding() {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <div className="max-w-3xl mx-auto bg-muted/50 rounded-lg p-6">
-            <p className="text-lg font-semibold text-foreground">
-              <span className="font-bold">Shared risk. Shared return. Real transformation.</span>
-              <br />
-              That's how Usekase funds the future of business growth.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

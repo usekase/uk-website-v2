@@ -17,9 +17,9 @@ export default function ProblemSolutionEnhanced() {
           className="max-w-6xl mx-auto mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center leading-tight text-black dark:text-black">
-            <span className="text-primary">See</span> the Results.<br />
-            <span className="text-primary">Own</span> the Capability.<br />
-            <span className="text-primary">Scale</span> the Advantage.
+            <span className="text-primary">See</span> the Results<br />
+            <span className="text-primary">Own</span> the Capability<br />
+            <span className="text-primary">Scale</span> the Advantage
           </h2>
 
           {/* Three Value Props */}
@@ -28,21 +28,21 @@ export default function ProblemSolutionEnhanced() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative group"
+              className="group"
             >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-md p-6 border-2 border-transparent group-hover:border-border transition-colors">
+                {/* Corner decorations - only visible on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
                 <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
                   <IconEye className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">See the Results</h3>
+                <h3 className="text-xl font-bold mb-2">Build</h3>
                 <p className="text-sm text-muted-foreground">
-                  Pinpoint where AI delivers the fastest, most certain returns across your entire value chain.
+                  Co-design and deploy your AI system.
                 </p>
               </div>
             </motion.div>
@@ -51,21 +51,21 @@ export default function ProblemSolutionEnhanced() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative group"
+              className="group"
             >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-md p-6 border-2 border-transparent group-hover:border-border transition-colors">
+                {/* Corner decorations - only visible on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
                 <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
                   <IconShield className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Own the Capability</h3>
+                <h3 className="text-xl font-bold mb-2">Operate</h3>
                 <p className="text-sm text-muted-foreground">
-                  Embed the tools, talent, and systems that keep delivering long after we're gone.
+                  We run and optimise until the value is proven.
                 </p>
               </div>
             </motion.div>
@@ -74,21 +74,21 @@ export default function ProblemSolutionEnhanced() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="relative group"
+              className="group"
             >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="relative bg-gradient-to-br from-primary/5 to-primary/10 rounded-md p-6 border-2 border-transparent group-hover:border-border transition-colors">
+                {/* Corner decorations - only visible on hover */}
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
 
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 border border-transparent group-hover:border-border transition-colors">
                 <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-4 transition-colors duration-200">
                   <IconTrendingUp className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Scale the Advantage</h3>
+                <h3 className="text-xl font-bold mb-2">Transfer</h3>
                 <p className="text-sm text-muted-foreground">
-                  Turn everyday processes into measurable growth engines designed to pay for themselves.
+                  You take ownership. The team, tech and processes are yours.
                 </p>
               </div>
             </motion.div>
@@ -99,33 +99,20 @@ export default function ProblemSolutionEnhanced() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white dark:bg-gray-800 rounded-xl p-8 border-2 border-primary/30 mb-12 shadow-lg"
           >
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <IconClock className="w-10 h-10 text-primary" />
-              <h3 className="text-2xl font-bold">Speed to Value</h3>
-            </div>
-            <p className="text-lg text-center text-muted-foreground">
-              You'll see first results in <span className="font-bold text-foreground">weeks, not months</span> — and sustainable impact in <span className="font-bold text-foreground">months, not years.</span>
-            </p>
-          </motion.div>
-
-          {/* Bottom Quote */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-center"
-          >
-            <div className="relative max-w-4xl mx-auto bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md p-8">
+            <div className="relative max-w-5xl mx-auto bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md p-8 md:p-10 mb-12">
               {/* Corner decorations */}
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md" />
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md" />
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md" />
               <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
 
-              <p className="text-lg">
-                True transformation happens when industry insight meets internal capability. We build that bridge — across sectors, functions, and the fabric of your business.
+              <div className="flex items-center justify-center gap-4 mb-4">
+                <IconClock className="w-10 h-10 text-primary" />
+                <h3 className="text-2xl font-bold">Speed to Value</h3>
+              </div>
+              <p className="text-lg text-center text-muted-foreground">
+                You'll see first results in <span className="font-bold text-foreground">weeks, not months</span>, and sustainable impact in <span className="font-bold text-foreground">months, not years.</span>
               </p>
             </div>
           </motion.div>

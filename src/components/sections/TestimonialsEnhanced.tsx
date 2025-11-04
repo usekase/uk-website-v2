@@ -10,7 +10,7 @@ export default function TestimonialsEnhanced() {
   const testimonials = [
     {
       quote:
-        "Usekase didn't just build us an AI tool — they built us an AI capability we truly own. Six months after transfer, we've extended it to three new use cases. No vendor calls needed.",
+        "UseKase didn't just build us an AI tool, they built us an AI capability we truly own. Six months after transfer, we've extended it to three new use cases. No vendor calls needed.",
       name: "Sarah Mitchell",
       designation: "Head of Operations, Mid-Market Manufacturing Company",
       src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
@@ -24,14 +24,14 @@ export default function TestimonialsEnhanced() {
     },
     {
       quote:
-        "The BOT model meant we weren't just getting software — we were getting knowledge transfer. Our team now understands how everything works and can maintain it ourselves.",
+        "The BOT model meant we weren't just getting software, we were getting knowledge transfer. Our team now understands how everything works and can maintain it ourselves.",
       name: "Emily Rodriguez",
       designation: "VP of Technology, Financial Services Firm",
       src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",
     },
     {
       quote:
-        "We were skeptical about owning AI infrastructure, but Usekase made it seamless. The transfer process was thorough, and they stood by us during the Monitor phase until we were confident.",
+        "We were skeptical about owning AI infrastructure, but UseKase made it seamless. The transfer process was thorough, and they stood by us during the Monitor phase until we were confident.",
       name: "James Patterson",
       designation: "Director of Engineering, Retail Operations",
       src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3",

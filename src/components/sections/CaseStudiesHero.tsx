@@ -20,11 +20,11 @@ export default function CaseStudiesHero() {
         >
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Real results.
+            Real results
             <br />
-            <span className="text-primary">Real businesses.</span>
+            <span className="text-primary">Real businesses</span>
             <br />
-            Real transformation.
+            Real transformation
           </h1>
 
           {/* Subtitle */}

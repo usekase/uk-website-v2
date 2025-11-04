@@ -50,12 +50,12 @@ export default function ValuePropositionEnhanced() {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Why Clients Choose <span className="text-primary">Usekase</span>
+            Why Clients Choose <span className="text-primary">UseKase</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We're not consultants who disappear after a PowerPoint. We're not a
             SaaS vendor locking you into subscriptions. We're your AI capability
-            partner — building what you need, transferring complete ownership.
+            partner, building what you need, transferring complete ownership.
           </p>
         </motion.div>
 

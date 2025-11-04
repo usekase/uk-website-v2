@@ -9,10 +9,7 @@ export default function CaseStudiesCTA() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section
-      ref={ref}
-      className="py-24 bg-white dark:bg-zinc-800"
-    >
+    <section ref={ref} className="py-24 bg-white dark:bg-zinc-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +55,7 @@ export default function CaseStudiesCTA() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-sm text-muted-foreground"
           >
-            No commitment required. Let's explore if the BOT model is right for you.
+            Let's find the best way to move your business forward.
           </motion.p>
         </motion.div>
       </div>

@@ -11,7 +11,6 @@ export default function UsekaseNavbar() {
   const navLinks = [
     { label: "Case Studies", href: "/case-studies", type: "route" },
     { label: "Platform", href: "/platform", type: "route" },
-    { label: "Contact Us", href: "/contact-us", type: "route" },
   ];
 
   const scrollToSection = (href: string) => {

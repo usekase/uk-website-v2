@@ -27,10 +27,11 @@ export default function FinalCTA() {
           className="max-w-5xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Join Us in Architecting the AI Economy
+            Start Your AI Journey With Us
           </h2>
           <p className="text-2xl text-white/95 mb-12 max-w-4xl mx-auto leading-relaxed">
-            We're building a future where every company — not just the few — can transform and scale with AI.
+            We're building a future where every company, not just the few, can
+            transform and scale with AI.
           </p>
 
           {/* Three audience cards */}
@@ -39,26 +40,56 @@ export default function FinalCTA() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col"
             >
               <Building2 className="w-10 h-10 mx-auto mb-4 text-white" />
-              <h3 className="text-lg font-bold text-white mb-2">For Businesses</h3>
-              <p className="text-white/80 text-sm">
+              <h3 className="text-lg font-bold text-white mb-2">
+                For Businesses
+              </h3>
+              <p className="text-white/80 text-sm mb-6">
                 Ready to accelerate your AI journey
               </p>
+              <div className="mt-auto">
+                <Button
+                  size="default"
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => {
+                    window.location.href = "/contact-us";
+                  }}
+                >
+                  Start Your Transformation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col"
             >
               <Users className="w-10 h-10 mx-auto mb-4 text-white" />
-              <h3 className="text-lg font-bold text-white mb-2">For Partners</h3>
-              <p className="text-white/80 text-sm">
+              <h3 className="text-lg font-bold text-white mb-2">
+                For Partners
+              </h3>
+              <p className="text-white/80 text-sm mb-6">
                 Looking to collaborate and build together
               </p>
+              <div className="mt-auto">
+                <Button
+                  size="default"
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => {
+                    window.location.href = "/contact-us";
+                  }}
+                >
+                  Start Your Transformation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
@@ -68,36 +99,21 @@ export default function FinalCTA() {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
             >
               <TrendingUp className="w-10 h-10 mx-auto mb-4 text-white" />
-              <h3 className="text-lg font-bold text-white mb-2">For Investors</h3>
+              <h3 className="text-lg font-bold text-white mb-2">
+                For Investors
+              </h3>
               <p className="text-white/80 text-sm">
                 Who believe in measurable impact
               </p>
             </motion.div>
           </div>
 
-          <div className="border-t border-white/20 pt-8 mb-8">
+          <div className="border-t border-white/20 pt-8">
             <p className="text-2xl font-bold text-white leading-relaxed">
-              Let's build intelligent businesses — and a smarter economy — together.
+              Let's build intelligent businesses, and a smarter economy,
+              together.
             </p>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col md:flex-row gap-4 justify-center items-center"
-        >
-          <Button
-            size="lg"
-            variant="secondary"
-            onClick={() => {
-              window.location.href = "/contact-us";
-            }}
-          >
-            Start Your Transformation
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </motion.div>
       </div>
     </section>
