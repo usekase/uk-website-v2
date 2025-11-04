@@ -4,17 +4,8 @@ import CaseStudiesHero from "@/components/sections/CaseStudiesHero";
 import CaseStudiesGrid from "@/components/sections/CaseStudiesGrid";
 import CaseStudiesMetrics from "@/components/sections/CaseStudiesMetrics";
 import CaseStudiesCTA from "@/components/sections/CaseStudiesCTA";
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import { testimonials } from "@/data/case-studies";
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 export default function CaseStudies() {
-  const testimonialsRef = useRef(null);
-  const isTestimonialsInView = useInView(testimonialsRef, {
-    once: true,
-    margin: "-100px",
-  });
 
   return (
     <div className="min-h-screen bg-background">
