@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { IconBrain, IconBolt, IconUsers, IconSearch, IconBulb, IconTool, IconHandStop } from "@tabler/icons-react";
+import { IconUsers, IconSearch, IconBulb, IconTool, IconHandStop } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 export default function KIBOTEngineEnhanced() {
