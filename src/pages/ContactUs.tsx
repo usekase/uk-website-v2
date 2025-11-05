@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import UsekaseNavbar from "@/components/layout/UsekaseNavbar";
 import UsekaseFooter from "@/components/layout/UsekaseFooter";
-import { Linkedin as LinkedinIcon, Facebook, Instagram, AlertCircle, CheckCircle2, User, Building2, Users, Target, Clock } from "lucide-react";
+import { Linkedin as LinkedinIcon, Facebook, Instagram, AlertCircle, CheckCircle2, User, Building2, Users, Target } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface FormData {
@@ -15,7 +15,6 @@ interface FormData {
   company: string;
   role: string;
   objective: string;
-  timeline: string;
 }
 
 interface FormErrors {
@@ -23,7 +22,6 @@ interface FormErrors {
   company?: string;
   role?: string;
   objective?: string;
-  timeline?: string;
 }
 
 export default function ContactUs() {
@@ -31,8 +29,7 @@ export default function ContactUs() {
     name: "",
     company: "",
     role: "",
-    objective: "",
-    timeline: ""
+    objective: ""
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
@@ -62,10 +59,6 @@ export default function ContactUs() {
       newErrors.objective = "Please describe what you're trying to achieve";
     } else if (formData.objective.trim().length < 10) {
       newErrors.objective = "Please provide more details (at least 10 characters)";
-    }
-
-    if (!formData.timeline.trim()) {
-      newErrors.timeline = "Timeline is required";
     }
 
     setErrors(newErrors);
@@ -118,8 +111,7 @@ export default function ContactUs() {
           name: "",
           company: "",
           role: "",
-          objective: "",
-          timeline: ""
+          objective: ""
         });
       } else {
         setSubmitStatus({
@@ -297,34 +289,6 @@ export default function ContactUs() {
                     <p className="text-sm text-destructive flex items-center gap-1">
                       <AlertCircle className="h-3.5 w-3.5" />
                       {errors.role}
-                    </p>
-                  )}
-                </div>
-
-                {/* Timeline Field */}
-                <div className="space-y-2">
-                  <Label htmlFor="timeline" className="text-base font-medium">
-                    Timeline <span className="text-destructive">*</span>
-                  </Label>
-                  <div className="relative">
-                    <Clock className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                    <Input
-                      id="timeline"
-                      name="timeline"
-                      type="text"
-                      value={formData.timeline}
-                      onChange={handleChange}
-                      placeholder="ASAP, 1-3 months, etc."
-                      className={`pl-10 h-12 placeholder:text-muted-foreground/40 ${
-                        errors.timeline ? "border-destructive" : ""
-                      }`}
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  {errors.timeline && (
-                    <p className="text-sm text-destructive flex items-center gap-1">
-                      <AlertCircle className="h-3.5 w-3.5" />
-                      {errors.timeline}
                     </p>
                   )}
                 </div>

@@ -15,10 +15,10 @@ export default function CaseStudiesCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-6xl mx-auto text-center"
         >
           {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Ready to Transform{" "}
             <span className="text-primary">Your Business?</span>
           </h2>

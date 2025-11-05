@@ -8,7 +8,6 @@ interface ContactFormData {
   company: string;
   role: string; // "Business", "Partner", or "Investor"
   objective: string;
-  timeline: string;
 }
 
 // Initialize Mailgun client
@@ -41,7 +40,7 @@ export default async function handler(
 
   try {
     // Parse and validate request body
-    const { name, company, role, objective, timeline } = req.body as ContactFormData;
+    const { name, company, role, objective } = req.body as ContactFormData;
 
     // Validate required fields
     const missingFields: string[] = [];
@@ -49,7 +48,6 @@ export default async function handler(
     if (!company?.trim()) missingFields.push('company');
     if (!role?.trim()) missingFields.push('role');
     if (!objective?.trim()) missingFields.push('objective');
-    if (!timeline?.trim()) missingFields.push('timeline');
 
     if (missingFields.length > 0) {
       return res.status(400).json({
@@ -74,8 +72,7 @@ export default async function handler(
         name: name.trim(),
         company: company.trim(),
         role: role.trim(),
-        objective: objective.trim(),
-        timeline: timeline.trim()
+        objective: objective.trim()
       })
     };
 

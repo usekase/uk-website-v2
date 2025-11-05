@@ -16,7 +16,7 @@ export default function BOTModelEnhanced() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-6xl mx-auto text-center mb-16"
         >
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
             True transformation happens when industry insight meets internal capability. We build that bridge across sectors, functions, and the fabric of your business.
@@ -34,12 +34,12 @@ export default function BOTModelEnhanced() {
               className="relative group"
             >
               {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 left-0 border-l-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 right-0 border-r-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 left-0 border-l-2 border-b-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 right-0 border-r-2 border-b-2 z-10" />
 
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border-2 border-transparent group-hover:border-border transition-colors h-full flex flex-col">
+              <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Industry</span>
@@ -74,12 +74,12 @@ export default function BOTModelEnhanced() {
               className="relative group"
             >
               {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 left-0 border-l-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 right-0 border-r-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 left-0 border-l-2 border-b-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 right-0 border-r-2 border-b-2 z-10" />
 
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border-2 border-transparent group-hover:border-border transition-colors h-full flex flex-col">
+              <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Business Domains</span>
@@ -114,12 +114,12 @@ export default function BOTModelEnhanced() {
               className="relative group"
             >
               {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 left-0 border-l-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute top-0 right-0 border-r-2 border-t-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 left-0 border-l-2 border-b-2 z-10" />
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute bottom-0 right-0 border-r-2 border-b-2 z-10" />
 
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border-2 border-transparent group-hover:border-border transition-colors h-full flex flex-col">
+              <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Your Company Context</span>
@@ -157,7 +157,7 @@ export default function BOTModelEnhanced() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <div className="relative max-w-5xl mx-auto bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md p-8 md:p-10">
+          <div className="relative max-w-6xl mx-auto bg-white dark:bg-gray-800 border-2 border-zinc-200 dark:border-zinc-700 rounded-md p-8 md:p-10">
             {/* Corner decorations */}
             <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md" />
             <div className="dark:border-zinc-200 border-zinc-700 size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md" />

@@ -15,7 +15,8 @@
       "Bash(git commit -m \"$(cat <<''EOF''\nfeat: Consolidate navbars and update icon styling for consistent UI\n\n- Replace transparent navbar with solid white background across all pages\n- Consolidate Navbar and UsekaseNavbar into single UsekaseNavbar component\n- Update all feature icons to grey by default with primary color on hover\n- Add hover animations to icons in ProblemSolutionEnhanced, KIBOTEngineEnhanced, and FlywheelFunding sections\n- Update section headings with selective primary color on key words (See, Own, Scale, Funding, One)\n- Remove redundant small text from ARCH Platform and Keystone Solutions cards\n- Restructure FlywheelFunding heading layout for better readability\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
       "Bash(git push:*)",
       "Bash(git commit -m \"$(cat <<''EOF''\nfix: Remove unused isScrolled state and useEffect from UsekaseNavbar\n\n- Remove unused isScrolled state variable\n- Remove unused isHomePage variable  \n- Remove useEffect hook that was handling scroll behavior\n- Remove useEffect from imports as it''s no longer needed\n\nThis fixes the TypeScript build error: TS6133\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

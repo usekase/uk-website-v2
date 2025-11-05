@@ -24,7 +24,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-5xl mx-auto text-center mb-16"
+          className="max-w-6xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
             Start Your AI Journey With Us
@@ -96,15 +96,28 @@ export default function FinalCTA() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 flex flex-col"
             >
               <TrendingUp className="w-10 h-10 mx-auto mb-4 text-white" />
               <h3 className="text-lg font-bold text-white mb-2">
                 For Investors
               </h3>
-              <p className="text-white/80 text-sm">
+              <p className="text-white/80 text-sm mb-6">
                 Who believe in measurable impact
               </p>
+              <div className="mt-auto">
+                <Button
+                  size="default"
+                  variant="secondary"
+                  className="w-full"
+                  onClick={() => {
+                    window.location.href = "/contact-us";
+                  }}
+                >
+                  Start Your Transformation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
             </motion.div>
           </div>
 

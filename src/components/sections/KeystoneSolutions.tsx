@@ -9,14 +9,14 @@ export default function KeystoneSolutions() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 bg-white dark:bg-zinc-900">
+    <section ref={ref} className="py-24 bg-white dark:bg-zinc-900 border-y">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Keystone ("<span className="text-primary">K</span>") Solutions
@@ -33,7 +33,7 @@ export default function KeystoneSolutions() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-6xl mx-auto mb-12"
+          className="max-w-6xl mx-auto"
         >
           <img
             src="/keystones.svg"

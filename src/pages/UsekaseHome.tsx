@@ -13,8 +13,8 @@ export default function UsekaseHome() {
       <main>
         <Hero />
         <ProblemSolutionEnhanced />
-        <BOTModelEnhanced />
         <SectorsEnhanced />
+        <BOTModelEnhanced />
         <FinalCTA />
       </main>
       <UsekaseFooter />

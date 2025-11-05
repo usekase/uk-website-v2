@@ -46,16 +46,16 @@ export default function CaseStudiesMetrics() {
   return (
     <section
       ref={ref}
-      className="py-20 bg-white dark:bg-zinc-900 border-y"
+      className="py-24 bg-white dark:bg-zinc-900 border-y"
     >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-16 max-w-6xl mx-auto"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Impact by the <span className="text-primary">Numbers</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

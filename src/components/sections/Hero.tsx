@@ -100,46 +100,15 @@ export default function Hero() {
       >
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {/* Partnered With Section */}
-              <div className="text-center md:text-right border-r-0 md:border-r border-white/40 pr-0 md:pr-8">
-                <h3 className="text-xs font-semibold text-white/60 tracking-wider mb-4">
-                  PARTNERED WITH
-                </h3>
-                <div className="flex items-center justify-center md:justify-end gap-6 md:gap-8 flex-wrap">
-                  {/* OpenAI */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-2xl font-bold">OpenAI</span>
-                  </div>
-                  {/* GCP */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-2xl font-bold">Google Cloud</span>
-                  </div>
-                  {/* AWS */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-2xl font-bold">AWS</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Backed By Section */}
-              <div className="text-center md:text-left pl-0 md:pl-8">
-                <h3 className="text-xs font-semibold text-white/60 tracking-wider mb-4">
-                  BACKED BY
-                </h3>
-                <div className="flex items-center justify-center md:justify-start gap-6 md:gap-8 flex-wrap">
-                  {/* LOGO1 */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-2xl font-bold">Name1</span>
-                  </div>
-                  {/* LOGO2 */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-2xl font-bold">Name2</span>
-                  </div>
-                  {/* LOGO3 */}
-                  <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                    <span className="text-xl font-bold">Name3</span>
-                  </div>
+            {/* Backed By Section */}
+            <div className="text-center">
+              <h3 className="text-xs font-semibold text-white/60 tracking-wider mb-4">
+                BACKED BY
+              </h3>
+              <div className="flex items-center justify-center gap-6 md:gap-8 flex-wrap">
+                {/* LOGO1 */}
+                <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
+                  <span className="text-2xl font-bold">UseKase's team of experts with 20+ years in AI & digital strategy, applied AI, and automation.</span>
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@ export default function PlatformHero() {
   return (
     <section
       ref={ref}
-      className="relative pt-32 pb-20 bg-white dark:bg-zinc-900"
+      className="relative pt-32 pb-24 bg-white dark:bg-zinc-900"
     >
       <div className="container mx-auto px-4">
         <motion.div

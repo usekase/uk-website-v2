@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
@@ -86,16 +85,13 @@ export function JobCardVertical({
           </div>
         </div>
 
-        <div className="mt-6">
-          <Button
-            variant="outline"
-            className="w-full"
-            onClick={() => {
-              window.location.href = "/contact-us";
-            }}
+        <div className="mt-6 relative z-20">
+          <a
+            href={`mailto:hello@usekase.ai?subject=${encodeURIComponent(`Job Application: ${title}`)}`}
+            className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors h-10 px-4 py-2 w-full border border-input bg-background hover:bg-secondary hover:text-secondary-foreground cursor-pointer text-center"
           >
             Apply Now →
-          </Button>
+          </a>
         </div>
       </div>
     </motion.div>

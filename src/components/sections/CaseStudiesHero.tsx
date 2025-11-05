@@ -9,17 +9,17 @@ export default function CaseStudiesHero() {
   return (
     <section
       ref={ref}
-      className="relative pt-32 pb-20 bg-white dark:bg-zinc-900"
+      className="relative pt-32 pb-24 bg-white dark:bg-zinc-900"
     >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-6xl mx-auto text-center"
         >
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
             Real results
             <br />
             <span className="text-primary">Real businesses</span>

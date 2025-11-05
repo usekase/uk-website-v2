@@ -30,13 +30,13 @@ export default function CaseStudiesGrid() {
   };
 
   return (
-    <section ref={ref} className="py-16 bg-zinc-50 dark:bg-zinc-800">
+    <section ref={ref} className="py-24 bg-zinc-50 dark:bg-zinc-800">
       <div className="container mx-auto px-4">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex flex-col gap-6 max-w-5xl mx-auto"
+          className="flex flex-col gap-6 max-w-6xl mx-auto"
         >
           {caseStudies.map((study) => (
             <motion.div key={study.id} variants={itemVariants}>
