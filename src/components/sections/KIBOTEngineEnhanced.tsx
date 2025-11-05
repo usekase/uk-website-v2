@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import { IconBrain, IconBolt, IconUsers } from "@tabler/icons-react";
+import { IconBrain, IconBolt, IconUsers, IconSearch, IconBulb, IconTool, IconHandStop } from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
 
 export default function KIBOTEngineEnhanced() {
   const ref = useRef(null);
@@ -19,59 +20,38 @@ export default function KIBOTEngineEnhanced() {
           className="max-w-6xl mx-auto mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Applied Intelligence Meets <span className="text-primary">Practical Execution</span>
+            <span className="text-primary">ARCH</span> Platform
           </h2>
           <p className="text-2xl text-center text-foreground font-semibold mb-12 max-w-4xl mx-auto">
-            We bring together forward-deployed experts and our proprietary ARCH platform to turn AI strategy into working systems.
+            Our framework that guides every transformation through four disciplined stages.
           </p>
 
-          {/* Two-column layout for ARCH and K-Solutions */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="relative group"
-            >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
-
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors duration-200">
-                  <IconBrain className="w-8 h-8 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">ARCH Platform</h3>
-                <p className="text-muted-foreground">
-                  Our proprietary framework that guides every transformation through four disciplined stages.
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative group"
-            >
-              {/* Corner decorations - only visible on hover */}
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -left-0.5 border-l-2 border-t-2 rounded-tl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -top-0.5 -right-0.5 border-r-2 border-t-2 rounded-tr-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -left-0.5 border-l-2 border-b-2 rounded-bl-md z-10" />
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 border-primary size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md z-10" />
-
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-8 border border-transparent group-hover:border-border transition-colors">
-                <div className="w-16 h-16 rounded-full bg-gray-300 dark:bg-gray-600 group-hover:bg-primary flex items-center justify-center mb-6 transition-colors duration-200">
-                  <IconBolt className="w-8 h-8 text-gray-600 dark:text-gray-300 group-hover:text-white transition-colors duration-200" />
-                </div>
-                <h3 className="text-2xl font-bold mb-4">Keystone (K) Solutions</h3>
-                <p className="text-muted-foreground">
-                  Proven accelerators like our AI Playbook that combine real-world experience with reusable intelligence.
-                </p>
-              </div>
-            </motion.div>
+          {/* Four-stage ARCH boxes */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 max-w-7xl mx-auto mb-12">
+            <ArchStage
+              title="Assessment"
+              description="Identify high-impact opportunities"
+              icon={<IconSearch className="w-8 h-8" />}
+              index={0}
+            />
+            <ArchStage
+              title="Re-imagine"
+              description="Define the future state powered by AI"
+              icon={<IconBulb className="w-8 h-8" />}
+              index={1}
+            />
+            <ArchStage
+              title="Construct"
+              description="Build and operationalize AI solutions"
+              icon={<IconTool className="w-8 h-8" />}
+              index={2}
+            />
+            <ArchStage
+              title="Hand-over"
+              description="Transfer ownership and capability"
+              icon={<IconHandStop className="w-8 h-8" />}
+              index={3}
+            />
           </div>
 
           {/* Value Proposition */}
@@ -121,3 +101,44 @@ export default function KIBOTEngineEnhanced() {
     </section>
   );
 }
+
+const ArchStage = ({
+  title,
+  description,
+  icon,
+  index,
+}: {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  index: number;
+}) => {
+  return (
+    <div
+      className={cn(
+        "flex flex-col lg:border-r py-10 relative group/feature border-border",
+        index === 0 && "lg:border-l border-border",
+        "lg:border-b border-border"
+      )}
+    >
+      <div className="opacity-0 group-hover/feature:opacity-100 transition duration-200 absolute inset-0 h-full w-full bg-primary/5 pointer-events-none" />
+
+      <div className="mb-4 relative z-10 px-10">
+        <div className="w-14 h-14 rounded-lg bg-gray-300 dark:bg-gray-600 group-hover/feature:bg-primary flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover/feature:text-white transition-colors duration-200">
+          {icon}
+        </div>
+      </div>
+      <div className="relative">
+        <div className="absolute left-0 top-0 bottom-0 w-1 rounded-tr-full rounded-br-full bg-border group-hover/feature:bg-primary transition-all duration-200" />
+        <div className="text-lg font-bold mb-2 relative z-10 px-10">
+          <span className="group-hover/feature:translate-x-2 transition duration-200 inline-block text-foreground">
+            <span className="text-primary">{title.charAt(0)}</span>{title.slice(1)}
+          </span>
+        </div>
+        <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+};

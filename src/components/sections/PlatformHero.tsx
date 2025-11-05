@@ -20,10 +20,7 @@ export default function PlatformHero() {
         >
           {/* Main Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-
-            <span className="text-primary">The AI Engine for</span>
-            <br />
-            Enterprise Operations
+            <span className="text-primary">Applied Intelligence</span> Meets Practical Execution
           </h1>
 
           {/* Subtitle */}
@@ -33,9 +30,7 @@ export default function PlatformHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
           >
-            Transform organizational knowledge into AI-driven workflows called
-            Routines, enabling rapid generation, refinement, and deployment of
-            scalable processes.
+            We bring together forward-deployed experts and our proprietary ARCH platform to turn AI strategy into working systems.
           </motion.p>
 
           {/* Decorative line */}

@@ -15,7 +15,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Financial Services",
     title: "Financial Services – Next-Gen Underwriting AI",
     image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2400&auto=format&fit=crop",
+      "https://assets.everspringpartners.com/1d/30/93e3c8c4433dab3f70e89babe519/msfa-what-is-fintech.jpg",
     challenge: "Manual workflows, high cost, slow decisioning.",
     solution:
       "Deployed agent in 9 months; embedded team; handed over in Month 12.",

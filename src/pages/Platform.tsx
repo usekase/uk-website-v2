@@ -1,10 +1,8 @@
 import UsekaseNavbar from "@/components/layout/UsekaseNavbar";
 import UsekaseFooter from "@/components/layout/UsekaseFooter";
 import PlatformHero from "@/components/sections/PlatformHero";
-import PlatformCapabilities from "@/components/sections/PlatformCapabilities";
-import PlatformValueProps from "@/components/sections/PlatformValueProps";
 import KIBOTEngineEnhanced from "@/components/sections/KIBOTEngineEnhanced";
-import FlywheelFunding from "@/components/sections/FlywheelFunding";
+import KeystoneSolutions from "@/components/sections/KeystoneSolutions";
 import PlatformCTA from "@/components/sections/PlatformCTA";
 
 export default function Platform() {
@@ -13,10 +11,8 @@ export default function Platform() {
       <UsekaseNavbar />
       <main>
         <PlatformHero />
-        <PlatformCapabilities />
-        <PlatformValueProps />
         <KIBOTEngineEnhanced />
-        <FlywheelFunding />
+        <KeystoneSolutions />
         <PlatformCTA />
       </main>
       <UsekaseFooter />
