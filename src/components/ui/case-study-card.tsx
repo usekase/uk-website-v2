@@ -11,6 +11,9 @@ export interface CaseStudyCardProps {
   outcomes: string[];
   slug?: string;
   className?: string;
+  isExpanded?: boolean;
+  onExpand?: () => void;
+  onCollapse?: () => void;
 }
 
 export function CaseStudyCard({
@@ -21,25 +24,38 @@ export function CaseStudyCard({
   solution,
   outcomes,
   className,
+  isExpanded = false,
+  onExpand,
+  onCollapse,
 }: CaseStudyCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
+  // Parse the first outcome to separate stat from description
+  const parseOutcome = (outcome: string) => {
+    // Match patterns like "+35% throughput" or "–40% inventory waste"
+    const match = outcome.match(/^([+–-]\d+%)\s+(.+)$/);
+    if (match) {
+      return { stat: match[1], description: match[2] };
+    }
+    return { stat: outcome, description: "" };
+  };
+
+  const firstOutcome = outcomes[0] ? parseOutcome(outcomes[0]) : null;
 
   return (
     <div
       className={cn("relative group", className)}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => onExpand?.()}
+      onMouseLeave={() => onCollapse?.()}
     >
       <div
         className={cn(
           "relative overflow-hidden border bg-card transition-all duration-300 ease-in-out cursor-pointer",
-          isHovered
+          isExpanded
             ? "h-auto min-h-[200px] md:min-h-[200px] border-primary shadow-lg shadow-primary/20 bg-primary/5"
             : "h-auto md:h-32 border-border hover:border-primary/50"
         )}
       >
         {/* Corner brackets that appear on hover */}
-        {isHovered && (
+        {isExpanded && (
           <>
             <div className="absolute top-3 left-3 w-6 h-6 z-10">
               <div className="absolute top-0 left-0 w-4 h-0.5 bg-primary" />
@@ -64,9 +80,28 @@ export function CaseStudyCard({
             <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-transparent to-card/20" />
             <div className={cn(
               "absolute inset-0 transition-colors duration-300",
-              isHovered ? "bg-primary/5" : "bg-foreground/10"
+              isExpanded ? "bg-primary/5" : "bg-foreground/10"
             )} />
           </div>
+
+          {/* Stats Column - Right of Image */}
+          {firstOutcome && (
+            <div className="flex items-center justify-center md:w-32 lg:w-40 flex-shrink-0 bg-card/50 backdrop-blur-sm border-r border-border/50 px-4 py-4 md:py-0">
+              <div className="text-center">
+                <div className={cn(
+                  "text-3xl md:text-4xl lg:text-5xl font-bold transition-colors duration-300",
+                  isExpanded ? "text-primary" : "text-foreground"
+                )}>
+                  {firstOutcome.stat}
+                </div>
+                {firstOutcome.description && (
+                  <div className="text-xs md:text-sm text-muted-foreground mt-1 capitalize">
+                    {firstOutcome.description}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* Bottom/Right Side - Content */}
           <div className="flex flex-col flex-1 px-4 md:px-6 lg:px-8 py-4 md:py-6">
@@ -78,15 +113,21 @@ export function CaseStudyCard({
               <h3
                 className={cn(
                   "font-bold transition-colors duration-300 text-lg md:text-xl",
-                  isHovered ? "text-primary" : "text-foreground"
+                  isExpanded ? "text-primary" : "text-foreground"
                 )}
               >
-                {title}
+                {industry === "Financial Services"
+                  ? "Next-Gen Underwriting AI"
+                  : industry === "Manufacturing"
+                  ? "Supply Chain Re-architecture"
+                  : industry === "Video Production"
+                  ? "AI-Powered Video Production"
+                  : title}
               </h3>
             </div>
 
             {/* Details visible on hover */}
-            {isHovered && (
+            {isExpanded && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -124,7 +165,7 @@ export function CaseStudyCard({
             )}
 
             {/* Collapsed state teaser */}
-            {!isHovered && (
+            {!isExpanded && (
               <p className="text-sm text-muted-foreground line-clamp-1">
                 {challenge}
               </p>

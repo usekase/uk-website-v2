@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { CaseStudyCard } from "@/components/ui/case-study-card";
 import { caseStudies } from "@/data/case-studies";
 
 export default function SectorsEnhanced() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,7 +56,7 @@ export default function SectorsEnhanced() {
           animate={isInView ? "visible" : "hidden"}
           className="flex flex-col gap-6 max-w-6xl mx-auto"
         >
-          {caseStudies.map((study) => (
+          {caseStudies.map((study, index) => (
             <motion.div key={study.id} variants={itemVariants}>
               <CaseStudyCard
                 title={study.title}
@@ -65,6 +66,9 @@ export default function SectorsEnhanced() {
                 solution={study.solution}
                 outcomes={study.outcomes}
                 slug={study.slug}
+                isExpanded={expandedIndex === index}
+                onExpand={() => setExpandedIndex(index)}
+                onCollapse={() => setExpandedIndex(null)}
               />
             </motion.div>
           ))}

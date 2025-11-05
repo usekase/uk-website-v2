@@ -42,6 +42,22 @@ export const caseStudies: CaseStudy[] = [
     ],
     slug: "manufacturing-supply-chain",
   },
+  {
+    id: "video-production-automation",
+    industry: "Video Production",
+    title: "Video Production – AI-Powered Editing Automation",
+    image:
+      "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2400&auto=format&fit=crop",
+    challenge: "Manual editing, time-consuming tasks, slow turnaround to clients.",
+    solution:
+      "Deployed agents for real-time voice and audio normalization over 3 months; embedded team trained internal staff on AI workflows.",
+    outcomes: [
+      "+25% faster turnaround time",
+      "+20% capacity added",
+      "Better operational flow with clients",
+    ],
+    slug: "video-production-automation",
+  },
 ];
 
 export const testimonials = [
