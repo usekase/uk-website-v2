@@ -51,7 +51,7 @@ const CyberneticGridShader = () => {
         float line  = pow(1.0 - min(gridUv.x, gridUv.y), 50.0);
 
         // base grid color pulsing
-        vec3 gridColor = vec3(0.1, 0.5, 1.0);
+        vec3 gridColor = vec3(0.7, 0.7, 0.7);
         vec3 color     = gridColor
                        * line
                        * (0.5 + sin(t * 2.0) * 0.2);
@@ -60,7 +60,7 @@ const CyberneticGridShader = () => {
         float energy = sin(uv.x * 20.0 + t * 5.0)
                      * sin(uv.y * 20.0 + t * 3.0);
         energy = smoothstep(0.8, 1.0, energy);
-        color += vec3(1.0, 0.2, 0.8) * energy * line;
+        color += vec3(0.533, 0.224, 0.937) * energy * line;
 
         // mouse tracking pulses - small localized ring
         float pulseSpeed = 3.0;
