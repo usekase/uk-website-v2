@@ -99,7 +99,7 @@ export default function UsekaseFooter() {
         {/* Bottom bar */}
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Usekase Pte Ltd. All rights reserved.
+            © {currentYear} UseKase Pte Ltd. All rights reserved.
           </div>
 
           {/* Social Links */}

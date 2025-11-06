@@ -9,7 +9,7 @@ export default function CareersListings() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-24 bg-gray-50 dark:bg-gray-900">
+    <section ref={ref} className="py-12 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <motion.div

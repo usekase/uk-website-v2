@@ -11,7 +11,7 @@ export default function FinalCTA() {
   return (
     <section
       id="about"
-      className="py-24 bg-primary text-white relative overflow-hidden"
+      className="pt-24 pb-12 bg-primary text-white relative overflow-hidden"
       ref={ref}
     >
       {/* Background pattern */}

@@ -31,7 +31,11 @@ export default function SectorsEnhanced() {
   };
 
   return (
-    <section id="sectors" className="py-24 bg-gray-50 dark:bg-gray-900" ref={ref}>
+    <section
+      id="sectors"
+      className="py-12 bg-gray-50 dark:bg-gray-900"
+      ref={ref}
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +44,7 @@ export default function SectorsEnhanced() {
           className="max-w-6xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            We Provide <span className="text-primary">Impact</span> In Weeks
+            Proven <span className="text-primary">Value</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             We partner with enterprises across diverse industries to build

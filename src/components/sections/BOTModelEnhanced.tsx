@@ -9,7 +9,7 @@ export default function BOTModelEnhanced() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="model" className="py-24 bg-gray-50 dark:bg-gray-900" ref={ref}>
+    <section id="model" className="py-12 bg-gray-50 dark:bg-gray-900" ref={ref}>
       <div className="container mx-auto px-4">
         {/* Section Introduction */}
         <motion.div
@@ -59,7 +59,7 @@ export default function BOTModelEnhanced() {
                 <div className="mt-6">
                   <Link to="/case-studies">
                     <Button variant="outline" className="w-full">
-                      Industry page →
+                      Case Studies page →
                     </Button>
                   </Link>
                 </div>

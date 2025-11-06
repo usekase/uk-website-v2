@@ -8,7 +8,11 @@ export default function ProblemSolutionEnhanced() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="solutions" className="py-24 bg-white dark:bg-gray-900" ref={ref}>
+    <section
+      id="solutions"
+      className="pt-24 pb-12 bg-white dark:bg-gray-900"
+      ref={ref}
+    >
       <div className="container mx-auto px-4">
         {/* Heading Section */}
         <motion.div
@@ -18,26 +22,35 @@ export default function ProblemSolutionEnhanced() {
           className="max-w-6xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center leading-tight text-black dark:text-black">
-            <span className="text-primary">See</span> the Results<br />
-            <span className="text-primary">Own</span> the Capability<br />
-            <span className="text-primary">Scale</span> the Advantage
+            <span className="text-primary">Target</span> the Value
+            <br />
+            <span className="text-primary">Accelerate</span> the Process
+            <br />
+            <span className="text-primary">Own</span> the Capability
           </h2>
 
           <div className="space-y-4">
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              UseKase works across your entire value chain to pinpoint where AI delivers the <span className="text-primary">fastest</span>, most certain returns.
+              UseKase works across your entire value chain to pinpoint where AI
+              delivers the <span className="text-primary">fastest</span>, most
+              certain returns.
             </p>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              Each initiative is designed to pay for itself - turning everyday processes into <span className="text-primary">measurable</span> growth engines.
+              Each initiative is designed to pay for itself - turning everyday
+              processes into <span className="text-primary">measurable</span>{" "}
+              growth engines.
             </p>
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-              We don't build solutions you must rely on us to run. We transfer the tools, talent, and <span className="text-primary">systems</span> directly to your team - so the capability becomes yours.
+              We don't build solutions you must rely on us to run. We transfer
+              the tools, talent, and{" "}
+              <span className="text-primary">systems</span> directly to your
+              team - so the capability becomes yours.
             </p>
           </div>
         </motion.div>
 
-          {/* Three Value Props - HIDDEN */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* Three Value Props - HIDDEN */}
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -123,7 +136,14 @@ export default function ProblemSolutionEnhanced() {
               <h3 className="text-2xl font-bold">Speed to Value</h3>
             </div>
             <p className="text-lg text-center text-muted-foreground">
-              You'll see first results in <span className="font-bold text-foreground">weeks, not months</span>, and sustainable impact in <span className="font-bold text-foreground">months, not years.</span>
+              You'll see first results in{" "}
+              <span className="font-bold text-foreground">
+                weeks, not months
+              </span>
+              , and sustainable impact in{" "}
+              <span className="font-bold text-foreground">
+                months, not years.
+              </span>
             </p>
           </div>
         </motion.div>
