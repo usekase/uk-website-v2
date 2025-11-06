@@ -14,7 +14,8 @@ export default function UsekaseFooter() {
               <img src="/uk-logo.png" alt="Usekase" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Building AI capabilities you can own, not just rent.
+              Building intelligent systems that help every company grow faster,
+              operate smarter, and compete on new terms.
             </p>
             {/* <div className="text-sm text-muted-foreground">
               <p className="font-semibold mb-2">Usekase Pte Ltd</p>
@@ -52,17 +53,42 @@ export default function UsekaseFooter() {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
-                <Link to="/case-studies" className="hover:text-foreground transition-colors">
+                <Link
+                  to="/case-studies"
+                  className="hover:text-foreground transition-colors"
+                >
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/platform" className="hover:text-foreground transition-colors">
+                <Link
+                  to="/platform"
+                  className="hover:text-foreground transition-colors"
+                >
                   Platform
                 </Link>
               </li>
               <li>
-                <Link to="/contact-us" className="hover:text-foreground transition-colors">
+                <Link
+                  to="/company"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Company
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/careers"
+                  className="hover:text-foreground transition-colors"
+                >
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact-us"
+                  className="hover:text-foreground transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -109,10 +135,16 @@ export default function UsekaseFooter() {
 
           {/* Legal Links */}
           <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-            <Link to="/privacy-policy" className="hover:text-foreground transition-colors">
+            <Link
+              to="/privacy-policy"
+              className="hover:text-foreground transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link to="/terms-of-service" className="hover:text-foreground transition-colors">
+            <Link
+              to="/terms-of-service"
+              className="hover:text-foreground transition-colors"
+            >
               Terms of Service
             </Link>
           </div>

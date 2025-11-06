@@ -19,7 +19,7 @@ export default function CareersHero() {
           className="max-w-4xl mx-auto text-center"
         >
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Elevate your <span className="text-primary">Career</span>
+            Build your <span className="text-primary">Career</span>
           </h1>
 
           <motion.div
