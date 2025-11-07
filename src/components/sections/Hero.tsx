@@ -108,7 +108,7 @@ export default function Hero() {
               <div className="flex items-center justify-center gap-6 md:gap-8 flex-wrap">
                 {/* LOGO1 */}
                 <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                  <span className="text-2xl font-bold">UseKase's team of experts with 20+ years in AI & digital strategy, applied AI, and automation.</span>
+                  <span className="text-2xl font-bold">UseKase's team of experts with 50+ years in combined AI & digital strategy, applied AI, and automation experience.</span>
                 </div>
               </div>
             </div>

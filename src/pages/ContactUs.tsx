@@ -259,10 +259,10 @@ export default function ContactUs() {
                     )}
                   </div>
 
-                  {/* I'm reaching out as Field */}
+                
                   <div className="space-y-2">
                     <Label htmlFor="role" className="text-base font-medium">
-                      I'm reaching out as a{" "}
+                      What brings you to us?{" "}
                       <span className="text-destructive">*</span>
                     </Label>
                     <div className="relative">
@@ -282,9 +282,9 @@ export default function ContactUs() {
                         disabled={isSubmitting}
                       >
                         <option value="">Select an option</option>
-                        <option value="Business">Business</option>
-                        <option value="Partner">Partner</option>
-                        <option value="Investor">Investor</option>
+                        <option value="Business">Business Transformation</option>
+                        <option value="Partner">Partnership</option>
+                        <option value="Investor">Investment</option>
                       </select>
                       <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
                         <svg

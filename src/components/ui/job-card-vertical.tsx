@@ -58,7 +58,7 @@ export function JobCardVertical({
 
           <div>
             <h4 className="text-sm font-semibold mb-2 text-foreground">
-              You'll do:
+              Responsibilities:
             </h4>
             <ul className="text-sm text-muted-foreground space-y-1">
               {responsibilities.slice(0, 2).map((item, idx) => (
@@ -72,7 +72,7 @@ export function JobCardVertical({
 
           <div>
             <h4 className="text-sm font-semibold mb-2 text-foreground">
-              You have:
+              Qualifications:
             </h4>
             <ul className="text-sm text-muted-foreground space-y-1">
               {requirements.slice(0, 2).map((item, idx) => (

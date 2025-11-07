@@ -7,7 +7,7 @@ const values = [
   {
     id: 1,
     icon: Users,
-    title: "20+ Years in Digital Strategy",
+    title: "50+ Years in Digital Strategy",
     description:
       "Deep expertise in transforming businesses through digital innovation and strategic planning.",
   },

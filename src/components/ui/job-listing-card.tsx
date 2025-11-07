@@ -110,7 +110,7 @@ export function JobListingCard({
                 {/* Key Responsibilities */}
                 <div className="flex gap-3">
                   <span className="font-semibold text-secondary min-w-[100px] flex-shrink-0">
-                    You'll do:
+                    Responsibilities:
                   </span>
                   <div className="flex-1">
                     <span className="text-foreground/90">
@@ -122,7 +122,7 @@ export function JobListingCard({
                 {/* Key Requirements */}
                 <div className="flex gap-3">
                   <span className="font-semibold text-accent min-w-[100px] flex-shrink-0">
-                    You have:
+                    Qualifications:
                   </span>
                   <div className="flex-1">
                     <span className="text-foreground/90">
