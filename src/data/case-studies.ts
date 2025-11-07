@@ -29,16 +29,19 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "manufacturing-supply-chain",
     industry: "Manufacturing",
-    title: "Manufacturing – Supply Chain Re-architecture",
+    title: "Manufacturing – Growth Engine Re-architecture",
     image:
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2400&auto=format&fit=crop",
-    challenge: "Fragmented data, poor demand forecasting, inventory waste.",
+    challenge:
+      "Fragmented data and manual lead handling restricted visibility and slowed conversions. Despite increasing digital activity, marketing’s contribution to revenue had stalled.",
     solution:
-      "Built predictive supply chain system with real-time insights; transferred complete ownership after training internal team.",
+      "Built a unified data foundation connecting CRM, web analytics, and conversational AI. Deployed agentic routing and scoring for instant lead qualification, automated follow-ups, and predictive performance insights. Operated jointly during capability build-up before transferring full ownership to the client team.",
     outcomes: [
-      "–40% inventory waste",
-      "+25% forecast accuracy",
-      "Complete team autonomy within 18 months",
+      "+85% qualified pipeline",
+      "3× engagement rate",
+      "60% faster response time",
+      "+28% marketing-sourced revenue",
+      "Autonomous growth engine transferred within 12 months"
     ],
     slug: "manufacturing-supply-chain",
   },
@@ -48,7 +51,8 @@ export const caseStudies: CaseStudy[] = [
     title: "Video Production – AI-Powered Editing Automation",
     image:
       "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2400&auto=format&fit=crop",
-    challenge: "Manual editing, time-consuming tasks, slow turnaround to clients.",
+    challenge:
+      "Manual editing, time-consuming tasks, slow turnaround to clients.",
     solution:
       "Deployed agents for real-time voice and audio normalization over 3 months; embedded team trained internal staff on AI workflows.",
     outcomes: [

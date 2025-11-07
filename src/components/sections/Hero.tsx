@@ -2,6 +2,23 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import CyberneticGridShader from "@/components/ui/cybernetic-grid-shader";
+import { LogoCarousel } from "@/components/ui/logo-carousel";
+
+// Array with text content for carousel - organized by column
+// Left column: Big numbers, Right column: Descriptions
+const leftColumnLogos = [
+  { name: "55 Plus", id: 1, text: "50+", isLargeText: true },
+  { name: "100 Plus", id: 3, text: "160+", isLargeText: true },
+  { name: "15 Plus", id: 5, text: "8+", isLargeText: true },
+  { name: "500 Plus", id: 7, text: "3", isLargeText: true },
+];
+
+const rightColumnLogos = [
+  { name: "Years Experience", id: 2, text: "years of experience" },
+  { name: "AI Playbooks Created", id: 4, text: "projects delivered" },
+  { name: "Industry Experts", id: 6, text: "industry experts" },
+  { name: "AI Solutions", id: 8, text: "AI solutions deployed" },
+];
 
 export default function Hero() {
   return (
@@ -102,14 +119,13 @@ export default function Hero() {
           <div className="max-w-6xl mx-auto">
             {/* Backed By Section */}
             <div className="text-center">
-              <h3 className="text-xs font-semibold text-white/60 tracking-wider mb-4">
+              <h3 className="text-xs font-semibold text-white/60 tracking-wider mb-6">
                 BACKED BY
               </h3>
-              <div className="flex items-center justify-center gap-6 md:gap-8 flex-wrap">
-                {/* LOGO1 */}
-                <div className="text-white/80 hover:text-white transition-colors cursor-pointer">
-                  <span className="text-2xl font-bold">UseKase's team of experts with 50+ years in combined AI & digital strategy, applied AI, and automation experience.</span>
-                </div>
+
+              {/* Logo Carousel */}
+              <div className="flex justify-center mb-8">
+                <LogoCarousel columns={[leftColumnLogos, rightColumnLogos]} />
               </div>
             </div>
           </div>
