@@ -18,35 +18,44 @@ export default function UKPlatform() {
           className="max-w-6xl mx-auto mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            <span className="text-primary">ARCH</span> Platform
+            <span className="text-primary">ARCH</span>: Our Platform for Transformation
           </h2>
-          <p className="text-2xl text-center text-foreground font-semibold mb-12 max-w-4xl mx-auto">
-            Our framework that guides every transformation through four disciplined stages.
+          <p className="text-2xl text-center text-foreground font-semibold mb-6 max-w-4xl mx-auto">
+            AI transformation fails when treated as a technical idea,<br />instead of a business system.
+          </p>
+          <p className="text-lg text-center text-muted-foreground mb-12 max-w-4xl mx-auto">
+            ARCH is Usekase's disciplined framework for turning ambition into measurable capability - guiding every project from discovery to ownership. It gives structure to innovation: validating value before investment, building only what matters, and ensuring your team can run and evolve the solution long after hand-over.
+            <br /><br />
+            That's how we make transformation repeatable, scalable, and self-sustaining.
           </p>
 
           {/* Four-stage ARCH boxes */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 max-w-7xl mx-auto mb-12">
             <ArchStage
               title="Assessment"
-              description="Identify high-impact opportunities"
+              description="Identify and Validate Opportunity
+We pinpoint where AI drives the most impact, aligning data, funding, and ROI before any build begins."
               icon={<IconSearch className="w-8 h-8" />}
               index={0}
             />
             <ArchStage
               title="Re-imagine"
-              description="Define the future state powered by AI"
+              description="Design the AI-Enabled Future
+Together we redesign key processes, select the right solutions, and plan how intelligence fits end-to-end on a solid technical base."
               icon={<IconBulb className="w-8 h-8" />}
               index={1}
             />
             <ArchStage
               title="Construct"
-              description="Build and operationalize AI solutions"
+              description="Build and Prove in the Real World
+Our experts deploy and operate live systems that deliver measurable gains and next-gen performance for your team."
               icon={<IconTool className="w-8 h-8" />}
               index={2}
             />
             <ArchStage
               title="Hand-over"
-              description="Transfer ownership and capability"
+              description="Transfer Ownership and Capability
+Once results are proven, we transfer tech, IP, and know-how - leaving you with a scalable, future-ready capability."
               icon={<IconHandStop className="w-8 h-8" />}
               index={3}
             />
@@ -73,7 +82,7 @@ export default function UKPlatform() {
                 <div>
                   <h3 className="text-xl font-bold mb-3">Your Advantage</h3>
                   <p className="text-lg text-muted-foreground">
-                    Each K-Solution shortens time-to-value and captures what works across industries — allowing us to deliver results faster while building your own foundation for future growth.
+                    ARCH turns AI from aspiration into architecture - a repeatable system for building competitive advantage.
                   </p>
                 </div>
               </div>
@@ -128,7 +137,7 @@ const ArchStage = ({
             <span className="text-primary">{title.charAt(0)}</span>{title.slice(1)}
           </span>
         </div>
-        <p className="text-sm text-muted-foreground max-w-xs relative z-10 px-10">
+        <p className="text-md text-muted-foreground relative z-10 px-10 whitespace-pre-line">
           {description}
         </p>
       </div>

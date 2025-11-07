@@ -43,7 +43,7 @@ export default function Hero() {
               <div className="border-white/40 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Your AI journey starts here{" "}
+                Your AI journey starts here<br />
                 <span className="text-secondary">and it's yours to own</span>
               </h1>
             </div>

@@ -37,10 +37,10 @@ export default function CaseStudiesMetrics() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const metrics = [
-    { value: "5+", label: "Projects Deployed" },
+    { value: "2+", label: "Projects Deployed" },
     { value: "100%", label: "Success Rate" },
     { value: "12mo", label: "Avg BOT Period" },
-    { value: "$1.5M", label: "Avg ROI Per Year" },
+    { value: "$1M", label: "Avg ROI Per Year" },
   ];
 
   return (
