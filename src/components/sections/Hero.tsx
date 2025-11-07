@@ -43,8 +43,11 @@ export default function Hero() {
               <div className="border-white/40 size-6 absolute -bottom-0.5 -right-0.5 border-r-2 border-b-2 rounded-br-md" />
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Your AI journey starts here<br />
-                <span className="text-secondary">and it's yours to own</span>
+                AI Transformation
+                <br />
+                <span className="text-secondary">
+                  Accessible to Every Business
+                </span>
               </h1>
             </div>
           </motion.div>
@@ -57,8 +60,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto"
           >
-            Building intelligent systems that help every company grow faster,
-            operate smarter, and compete on new terms.
+            We build capabilities where they belong - inside your organisation.
+            <p /> So you can grow faster, operate smarter, and scale sustainably
+            with AI.
           </motion.p>
 
           <motion.div
@@ -82,11 +86,11 @@ export default function Hero() {
               variant="outline"
               className="text-base px-8"
               onClick={() => {
-                window.open("https://playbook.usekase.ai", "_blank");
+                window.open("/contact-us");
               }}
             >
               <Play className="mr-2 h-5 w-5" />
-              Build your AI Strategy
+              Start Building Your AI Capability
             </Button>
           </motion.div>
         </div>

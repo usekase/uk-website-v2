@@ -14,8 +14,9 @@ export default function UsekaseFooter() {
               <img src="/uk-logo.png" alt="Usekase" className="h-12" />
             </div>
             <p className="text-sm text-muted-foreground mb-4">
-              Building intelligent systems that help every company grow faster,
-              operate smarter, and compete on new terms.
+              We build capabilities where they belong - inside your
+              organisation. So you can grow faster, operate smarter, and scale
+              sustainably with AI.
             </p>
             {/* <div className="text-sm text-muted-foreground">
               <p className="font-semibold mb-2">Usekase Pte Ltd</p>
@@ -58,14 +59,6 @@ export default function UsekaseFooter() {
                   className="hover:text-foreground transition-colors"
                 >
                   Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/platform"
-                  className="hover:text-foreground transition-colors"
-                >
-                  Platform
                 </Link>
               </li>
               <li>
