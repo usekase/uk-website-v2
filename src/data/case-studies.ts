@@ -12,43 +12,45 @@ export interface CaseStudy {
 export const caseStudies: CaseStudy[] = [
   {
     id: "financial-services-underwriting",
-    industry: "Financial Services",
-    title: "Financial Services – Next-Gen Underwriting AI",
+    industry: "Solution Provider",
+    title: "Engineering Velocity Reboot",
     image:
       "https://assets.everspringpartners.com/1d/30/93e3c8c4433dab3f70e89babe519/msfa-what-is-fintech.jpg",
-    challenge: "Manual workflows, high cost, slow decisioning.",
+    challenge:
+      "A B2B solution provider faced mounting delivery delays and coordination gaps between product, data, and engineering. Release cycles dragged, and developer time was consumed by repetitive QA and documentation tasks.",
     solution:
-      "Deployed agent in 9 months; embedded team; handed over in Month 12.",
+      "Activated an AI-driven productivity layer automating test creation, release notes, and task synchronization across dev tools. Introduced agentic orchestration for faster approvals and smarter prioritization, cutting friction and boosting focus on high-value work.",
     outcomes: [
-      "+35% throughput",
-      "–20% cost",
-      "Full transfer to client operations",
+      "+43% engineering productivity",
+      "30% faster release cycles",
+      "25% fewer blockers",
+      "Self-optimizing delivery engine established within 8 weeks"
     ],
     slug: "financial-services-underwriting",
   },
   {
     id: "manufacturing-supply-chain",
     industry: "Manufacturing",
-    title: "Manufacturing – Growth Engine Re-architecture",
+    title: "Manufacturing - Growth Engine Re-architecture",
     image:
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2400&auto=format&fit=crop",
     challenge:
-      "Fragmented data and manual lead handling restricted visibility and slowed conversions. Despite increasing digital activity, marketing’s contribution to revenue had stalled.",
+      "Fragmented data and manual lead handling restricted visibility and slowed conversions. Despite increasing digital activity, marketing's contribution to revenue had stalled.",
     solution:
       "Built a unified data foundation connecting CRM, web analytics, and conversational AI. Deployed agentic routing and scoring for instant lead qualification, automated follow-ups, and predictive performance insights. Operated jointly during capability build-up before transferring full ownership to the client team.",
     outcomes: [
       "+85% qualified pipeline",
-      "3× engagement rate",
+      "3x engagement rate",
       "60% faster response time",
       "+28% marketing-sourced revenue",
-      "Autonomous growth engine transferred within 12 months"
+      "Autonomous growth engine transferred within 12 months",
     ],
     slug: "manufacturing-supply-chain",
   },
   {
     id: "video-production-automation",
     industry: "Video Production",
-    title: "Video Production – AI-Powered Editing Automation",
+    title: "Video Production - AI-Powered Editing Automation",
     image:
       "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=2400&auto=format&fit=crop",
     challenge:
@@ -61,6 +63,24 @@ export const caseStudies: CaseStudy[] = [
       "Better operational flow with clients",
     ],
     slug: "video-production-automation",
+  },
+  {
+    id: "retail-ai-playbook",
+    industry: "Retail",
+    title: "AI Playbook for 1.5bn+ Strategy",
+    image:
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2400&auto=format&fit=crop",
+    challenge:
+      "A top-100 brand aimed to define how AI could drive over $1.5B SGD in value in its next strategy cycle but needed clarity on where to prioritize and what was feasible.",
+    solution:
+      "The company created a use-case roadmap and feasibility study covering the brand's value chain using Usekase's enterprise AI Playbook solution - prioritizing high-impact, high-certainty opportunities and shaping a clear path from pilots to scale.",
+    outcomes: [
+      "$1.5B SGD value potential",
+      "8 validated AI strategic themes from +100 use case ideas",
+      "Estimated 35% faster time-to-market",
+      "+2% uptick in revenue",
+    ],
+    slug: "retail-ai-playbook",
   },
 ];
 

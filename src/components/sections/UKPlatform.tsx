@@ -1,17 +1,15 @@
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import { IconUsers, IconSearch, IconBulb, IconTool, IconHandStop } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
-export default function KIBOTEngineEnhanced() {
+export default function UKPlatform() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="platform" className="py-24 bg-muted/30" ref={ref}>
+    <section id="platform" className="pt-24 pb-12 bg-muted/30" ref={ref}>
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -90,11 +88,6 @@ export default function KIBOTEngineEnhanced() {
           className="text-center"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link to="/platform">
-              <Button size="lg">
-                Explore ARCH →
-              </Button>
-            </Link>
           </div>
         </motion.div>
       </div>

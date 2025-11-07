@@ -29,8 +29,11 @@ export function CaseStudyCard({
 }: CaseStudyCardProps) {
   // Parse the first outcome to separate stat from description
   const parseOutcome = (outcome: string) => {
-    // Match patterns like "+35% throughput" or "–40% inventory waste"
-    const match = outcome.match(/^([+–-]\d+%)\s+(.+)$/);
+    // Match patterns like:
+    // - "+35% throughput" or "–40% inventory waste"
+    // - "+$1.5bn value potential"
+    // - "3x engagement rate"
+    const match = outcome.match(/^([+–-]?[$]?\d+\.?\d*[%xbn]*)\s+(.+)$/i);
     if (match) {
       return { stat: match[1], description: match[2] };
     }

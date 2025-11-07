@@ -72,7 +72,11 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
         <AnimatePresence mode="wait">
           <motion.div
             key={`${currentLogo.id}-${currentIndex}`}
-            className="absolute inset-0 flex items-center justify-center"
+            className={`absolute inset-0 flex items-center ${
+              currentLogo.isLargeText
+                ? 'justify-end pr-4' // Right align numbers (left column)
+                : 'justify-start pl-4' // Left align descriptions (right column)
+            }`}
             initial={{ y: "10%", opacity: 0, filter: "blur(8px)" }}
             animate={{
               y: "0%",
@@ -99,7 +103,11 @@ const LogoColumn: React.FC<LogoColumnProps> = React.memo(
             }}
           >
             {currentLogo.text ? (
-              <span className={`font-bold text-white ${currentLogo.isLargeText ? 'text-5xl md:text-7xl' : 'text-base md:text-xl text-center'}`}>
+              <span className={`font-bold text-white ${
+                currentLogo.isLargeText
+                  ? 'text-5xl md:text-7xl text-right'
+                  : 'text-base md:text-xl text-left'
+              }`}>
                 {currentLogo.text}
               </span>
             ) : CurrentLogo ? (

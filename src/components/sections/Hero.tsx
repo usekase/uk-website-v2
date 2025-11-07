@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import CyberneticGridShader from "@/components/ui/cybernetic-grid-shader";
 import { LogoCarousel } from "@/components/ui/logo-carousel";
@@ -10,7 +10,7 @@ const leftColumnLogos = [
   { name: "55 Plus", id: 1, text: "50+", isLargeText: true },
   { name: "100 Plus", id: 3, text: "160+", isLargeText: true },
   { name: "15 Plus", id: 5, text: "8+", isLargeText: true },
-  { name: "500 Plus", id: 7, text: "3", isLargeText: true },
+  { name: "500 Plus", id: 7, text: "3x", isLargeText: true },
 ];
 
 const rightColumnLogos = [
@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <Button
+            {/* <Button
               size="lg"
               className="text-base px-8"
               onClick={() => {
@@ -76,7 +76,7 @@ export default function Hero() {
             >
               Explore the Platform
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            </Button> */}
             <Button
               size="lg"
               variant="outline"

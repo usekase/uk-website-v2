@@ -4,6 +4,7 @@ import Hero from "@/components/sections/Hero";
 import ProblemSolutionEnhanced from "@/components/sections/ProblemSolutionEnhanced";
 import BOTModelEnhanced from "@/components/sections/BOTModelEnhanced";
 import SectorsEnhanced from "@/components/sections/SectorsEnhanced";
+import UKPlatform from "@/components/sections/UKPlatform";
 import FinalCTA from "@/components/sections/FinalCTA";
 
 export default function UsekaseHome() {
@@ -15,6 +16,7 @@ export default function UsekaseHome() {
         <ProblemSolutionEnhanced />
         <SectorsEnhanced />
         <BOTModelEnhanced />
+        <UKPlatform />
         <FinalCTA />
       </main>
       <UsekaseFooter />

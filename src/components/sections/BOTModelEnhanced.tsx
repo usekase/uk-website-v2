@@ -19,7 +19,9 @@ export default function BOTModelEnhanced() {
           className="max-w-6xl mx-auto text-center mb-16"
         >
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed">
-            True transformation happens when industry insight meets internal capability. We build that bridge across sectors, functions, and the fabric of your business.
+            True transformation happens when industry insight meets internal
+            capability. We build that bridge across sectors, functions, and the
+            fabric of your business.
           </p>
         </motion.div>
 
@@ -41,6 +43,9 @@ export default function BOTModelEnhanced() {
 
               <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    Layer 1
+                  </p>
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Industry</span>
                   </h3>
@@ -50,10 +55,12 @@ export default function BOTModelEnhanced() {
                 </div>
                 <div className="flex-grow">
                   <p className="text-muted-foreground mb-4">
-                    We bring deep understanding of how AI is reshaping key industries and where to compete next.
+                    We bring deep understanding of how AI is reshaping key
+                    industries and where to compete next.
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    We start by identifying where AI can move the market, not just your metrics.
+                    We start by identifying where AI can move the market, not
+                    just your metrics.
                   </p>
                 </div>
                 <div className="mt-6">
@@ -81,6 +88,9 @@ export default function BOTModelEnhanced() {
 
               <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    Layer 2
+                  </p>
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Business Domains</span>
                   </h3>
@@ -90,16 +100,19 @@ export default function BOTModelEnhanced() {
                 </div>
                 <div className="flex-grow">
                   <p className="text-muted-foreground mb-4">
-                    We connect strategy to execution by focusing on functional leverage points. The areas where intelligent systems create measurable uplift and efficiency.
+                    We connect strategy to execution by focusing on functional
+                    leverage points. The areas where intelligent systems create
+                    measurable uplift and efficiency.
                   </p>
                   <p className="text-muted-foreground mb-4">
-                    We target the functions that drive the P&L, and turn them into growth engines.
+                    We target the functions that drive the P&L, and turn them
+                    into growth engines.
                   </p>
                 </div>
                 <div className="mt-6">
                   <Link to="https://playbook.usekase.ai">
                     <Button variant="outline" className="w-full">
-                      Use Case library →
+                      Discover AI Playbook →
                     </Button>
                   </Link>
                 </div>
@@ -121,19 +134,21 @@ export default function BOTModelEnhanced() {
 
               <div className="bg-white dark:bg-gray-800 p-8 border-2 border-white dark:border-gray-700 group-hover:border-border transition-colors h-full flex flex-col">
                 <div className="mb-4">
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                    Layer 3
+                  </p>
                   <h3 className="text-2xl font-bold mb-1">
                     <span className="text-primary">Your Company Context</span>
                   </h3>
                   <p className="text-xl font-semibold text-muted-foreground mb-3">
-                    Where Competitive Advantage Is Built
+                    Where Advantage Is Built
                   </p>
                 </div>
                 <div className="flex-grow">
                   <p className="text-muted-foreground mb-4">
-                    No two businesses start from the same place.
-                  </p>
-                  <p className="text-muted-foreground mb-4">
-                    We design every solution around your data, systems, and people. Building the internal capabilities, culture, and confidence needed to sustain results long after hand-over.
+                    Every organization starts from a different place. We design
+                    around your data, systems, and people - building internal
+                    capabilities and confidence that last after handover.
                   </p>
                   <p className="text-muted-foreground mb-4">
                     Because advantage isn't installed, it's built from within.
@@ -179,12 +194,15 @@ export default function BOTModelEnhanced() {
                 <blockquote className="mb-3">
                   <p className="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed italic">
                     "By working across all three layers, UseKase delivers
-                    solutions that are globally informed, operationally grounded,
-                    and uniquely yours."
+                    solutions that are globally informed, operationally
+                    grounded, and uniquely yours."
                   </p>
                 </blockquote>
                 <p className="text-sm md:text-base text-gray-600 dark:text-gray-400">
-                  <span className="font-semibold text-gray-900 dark:text-gray-100">Martin Gents</span>, Founder & CEO, UseKase
+                  <span className="font-semibold text-gray-900 dark:text-gray-100">
+                    Martin Gents
+                  </span>
+                  , Founder & CEO, UseKase
                 </p>
               </div>
             </div>

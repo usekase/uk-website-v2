@@ -154,9 +154,9 @@ export default function ContactUs() {
                 <div className="space-y-3">
                   <h2 className="text-2xl font-bold">Singapore HQ</h2>
                   <div className="text-lg text-muted-foreground">
-                    <p>9 Taman Serasi,</p>
-                    <p>'Botanic Gardens View'</p>
-                    <p>Singapore 257720</p>
+                    <p>68 Circular Rd,</p>
+                    <p>Unit 02-01</p>
+                    <p>Singapore 049422</p>
                   </div>
                 </div>
 
@@ -259,7 +259,6 @@ export default function ContactUs() {
                     )}
                   </div>
 
-                
                   <div className="space-y-2">
                     <Label htmlFor="role" className="text-base font-medium">
                       What brings you to us?{" "}
@@ -282,7 +281,9 @@ export default function ContactUs() {
                         disabled={isSubmitting}
                       >
                         <option value="">Select an option</option>
-                        <option value="Business">Business Transformation</option>
+                        <option value="Business">
+                          Business Transformation
+                        </option>
                         <option value="Partner">Partnership</option>
                         <option value="Investor">Investment</option>
                       </select>
